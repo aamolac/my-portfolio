@@ -1,9 +1,14 @@
+import Header from "./Components/Partial/Header.jsx";
+import AppRouter from "./Components/Router.jsx";
+import Footer from "./Components/Partial/Footer.jsx";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <h2>Annaïg MOLAC</h2>
-    </div>
+    <>
+      <Header />
+      <AppRouter />
+      <Footer />
+    </>
   );
 }
 
