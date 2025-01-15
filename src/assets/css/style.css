@@ -268,10 +268,11 @@ footer .social-media a {
 }
 .banner h1 {
   font-size: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 .banner p {
   font-size: 2rem;
+  padding-bottom: 2rem;
 }
 .banner .social-media {
   display: flex;
@@ -284,34 +285,44 @@ footer .social-media a {
   font-size: 5rem;
 }
 
+#presentation h2 {
+  grid-area: presentation;
+}
+#presentation .introduction {
+  grid-area: introduction;
+}
 #presentation .introduction p {
   margin: 1.5rem 3rem 1.5rem 3rem;
 }
-#presentation h2,
 #presentation h3 {
   text-align: center;
-}
-#presentation h3 {
   text-decoration: underline;
 }
 #presentation .training,
-#presentation .techno {
+#presentation .techno-langage,
+#presentation .techno-tool {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem;
-  border-radius: 5%;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
 }
 #presentation .training p,
-#presentation .techno p {
+#presentation .techno-langage p,
+#presentation .techno-tool p {
   text-align: center;
 }
-#presentation .techno div {
+#presentation .training {
+  grid-area: training;
+}
+#presentation .techno-langage div,
+#presentation .techno-tool div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
 }
-#presentation .techno div div {
+#presentation .techno-langage div div,
+#presentation .techno-tool div div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,50 +330,82 @@ footer .social-media a {
   padding: 1rem;
   margin: 1rem auto;
   background-color: #0d1b2a;
-  border-radius: 8%;
+  border-radius: 1rem;
   max-width: 20rem;
 }
-#presentation .techno div div img {
+#presentation .techno-langage div div img,
+#presentation .techno-tool div div img {
   max-width: 100%;
   max-height: 4rem;
   height: auto;
 }
+#presentation .techno-langage {
+  grid-area: techno-langage;
+}
+#presentation .techno-tool {
+  grid-area: techno-tool;
+}
+@media screen and (min-width:768px) {
+  #presentation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " presentation presentation" " introduction training" " introduction techno-tool" "techno-langage techno-langage";
+    gap: 2rem;
+  }
+  #presentation .training,
+  #presentation .techno-langage,
+  #presentation .techno-tool {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
 
-#project {
+#project div {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem;
-  border-radius: 5%;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-#project article {
+#project div article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 3rem;
-  margin: 2rem auto 5rem auto;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: auto;
   background-color: #0d1b2a;
-  border-radius: 8%;
+  border-radius: 2rem;
 }
-#project article img {
+#project div article img {
   max-width: 100%;
   max-height: 100rem;
   height: auto;
-  border-radius: 5%;
+  border-radius: 1rem;
 }
-#project article a {
+#project div article a {
   background-color: #56a3d4;
   color: #f5f5f5;
   font-size: 1.6rem;
   font-family: "Lora-Medium";
-  padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #4d4d4d;
-  width: 30%;
+  width: 80%;
   display: block;
   text-align: center;
-  margin: 0.5rem auto;
+  padding: 1.5rem 1rem;
+  margin: auto;
+}
+@media screen and (min-width:768px) {
+  #project div {
+    flex-direction: row;
+  }
+  #project div article {
+    width: 50%;
+  }
 }
 
 #contact form {
@@ -408,7 +451,7 @@ footer .social-media a {
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #4d4d4d;
-  width: 50%;
+  width: 85%;
   display: block;
   margin: 0.5rem auto;
 }
@@ -450,19 +493,36 @@ footer .social-media a {
 .langage-techno .tool {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 3rem;
-  border-radius: 5%;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
 }
-.langage-techno .front-end div,
-.langage-techno .back-end div,
-.langage-techno .tool div {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width:768px) {
+  .langage-techno .front-end,
+  .langage-techno .back-end,
+  .langage-techno .tool {
+    padding: 3rem;
+    margin: 5rem;
+  }
+}
+@media screen and (min-width:768px) {
+  .langage-techno .front-end div,
+  .langage-techno .back-end div,
+  .langage-techno .tool div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .langage-techno .front-end div h3,
+  .langage-techno .back-end div h3,
+  .langage-techno .tool div h3 {
+    padding-bottom: 0;
+  }
 }
 .langage-techno .front-end div div,
 .langage-techno .back-end div div,
 .langage-techno .tool div div {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .langage-techno .front-end div div img,
@@ -483,6 +543,108 @@ footer .social-media a {
 .langage-techno .back-end ul svg,
 .langage-techno .tool ul span,
 .langage-techno .tool ul svg {
+  color: #56a3d4;
+}
+@media screen and (min-width:1024px) {
+  .langage-techno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " title title" " front-end back-end" " tool tool";
+  }
+  .langage-techno h2 {
+    grid-area: title;
+  }
+  .langage-techno .front-end {
+    grid-area: front-end;
+  }
+  .langage-techno .back-end {
+    grid-area: back-end;
+  }
+  .langage-techno .tool {
+    grid-area: tool;
+  }
+}
+
+.functionality .functionality-user,
+.functionality .functionality-admin {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
+}
+@media screen and (min-width:768px) {
+  .functionality .functionality-user,
+  .functionality .functionality-admin {
+    padding: 3rem;
+    margin: 5rem;
+  }
+}
+.functionality .functionality-user div,
+.functionality .functionality-admin div {
+  display: flex;
+  gap: 1rem;
+}
+.functionality .functionality-user div svg,
+.functionality .functionality-admin div svg {
+  color: #56a3d4;
+  font-size: 4rem;
+}
+@media screen and (min-width:768px) {
+  .functionality .functionality-user div,
+  .functionality .functionality-admin div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .functionality .functionality-user div h3,
+  .functionality .functionality-admin div h3 {
+    padding-bottom: 0;
+  }
+}
+.functionality .functionality-user ul span,
+.functionality .functionality-user ul svg,
+.functionality .functionality-admin ul span,
+.functionality .functionality-admin ul svg {
+  color: #56a3d4;
+}
+@media screen and (min-width:1024px) {
+  .functionality {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " title title" " user admin";
+  }
+  .functionality h2 {
+    grid-area: title;
+  }
+  .functionality .functionality-user {
+    grid-area: user;
+  }
+  .functionality .functionality-user div {
+    align-items: center;
+  }
+  .functionality .functionality-user div h3 {
+    padding-bottom: 0;
+  }
+  .functionality .functionality-admin {
+    grid-area: admin;
+  }
+}
+
+.requirement div {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
+}
+@media screen and (min-width:768px) {
+  .requirement div {
+    padding: 3rem;
+    margin: 5rem;
+  }
+}
+.requirement ul span,
+.requirement ul svg {
   color: #56a3d4;
 }
 
@@ -517,8 +679,10 @@ h4 {
 
 h2 {
   font-size: 2.5rem;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
+  margin: 5rem 0 2rem 0;
+  border-bottom: 0.1rem solid #56a3d4;
 }
 
 h3 {

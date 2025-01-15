@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faUser,
+  faUserGear,
+} from "@fortawesome/free-solid-svg-icons";
 
 function ProjectMystTravel() {
   return (
@@ -7,7 +11,7 @@ function ProjectMystTravel() {
       <section className="banner-myst-travel">
         <h1>Projet - Myst'Travel</h1>
       </section>
-      <section className="presentation-myst-travel">
+      <section className="presentation-myst-travel container">
         <p>
           Dans le cadre de ma formation Développeur Web FullStack à la 3W
           Academy, j'ai créé un projet intitulé Myst'Travel, un site web d'une
@@ -26,23 +30,23 @@ function ProjectMystTravel() {
           référencement SEO.
         </p>
       </section>
-      <section className="screen-page">
+      <section className="screen-page container">
         <img
-          src="/src/assets/image/myst-travel-home.png"
+          src="./src/assets/image/myst-travel-home.png"
           alt="Image de la page d'accueil du site Myst'Travel"
         />
       </section>
-      <section className="langage-techno">
+      <section className="langage-techno container">
         <h2> Langages et technologies utilisés</h2>
         <div className="front-end">
           <div>
             <h3>Front-end</h3>
             <div>
-              <img src="/src/assets/image/html-5.png" alt="logo HTML" />
-              <img src="/src/assets/image/css-3.png" alt="logo CSS" />
-              <img src="/src/assets/image/sass-logo.png" alt="logo SASS" />
-              <img src="/src/assets/image/js.png" alt="logo JavaScript" />
-              <img src="/src/assets/image/react.png" alt="logo React.JS" />
+              <img src="./src/assets/image/html-5.png" alt="logo HTML" />
+              <img src="./src/assets/image/css-3.png" alt="logo CSS" />
+              <img src="./src/assets/image/sass-logo.png" alt="logo SASS" />
+              <img src="./src/assets/image/js.png" alt="logo JavaScript" />
+              <img src="./src/assets/image/react.png" alt="logo React.JS" />
             </div>
           </div>
           <ul>
@@ -70,9 +74,9 @@ function ProjectMystTravel() {
           <div>
             <h3>Back-end</h3>
             <div>
-              <img src="/src/assets/image/node-js.png" alt="logo Node.JS" />
-              <img src="/src/assets/image/express.png" alt="logo Express" />
-              <img src="/src/assets/image/my-sql.png" alt="logo MySQL" />
+              <img src="./src/assets/image/node-js.jpeg" alt="logo Node.JS" />
+              <img src="./src/assets/image/express.png" alt="logo Express" />
+              <img src="./src/assets/image/my-sql.png" alt="logo MySQL" />
             </div>
           </div>
           <ul>
@@ -93,12 +97,12 @@ function ProjectMystTravel() {
             <h3>Outils</h3>
             <div>
               <img
-                src="/src/assets/image/visual-studio-code.png"
+                src="./src/assets/image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
-              <img src="/src/assets/image/github.png" alt="logo GitHub" />
-              <img src="/src/assets/image/postman.png" alt="logo Postman" />
-              <img src="/src/assets/image/figma.png" alt="logo Figma" />
+              <img src="./src/assets/image/github.png" alt="logo GitHub" />
+              <img src="./src/assets/image/postman.png" alt="logo Postman" />
+              <img src="./src/assets/image/figma.png" alt="logo Figma" />
             </div>
           </div>
           <ul>
@@ -109,8 +113,8 @@ function ProjectMystTravel() {
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
-              <span className="bold">Postman et ThunderClient :</span> pour
-              tester et vérifier les routes de l'API.
+              <span className="bold">Postman :</span> pour tester et vérifier
+              les routes de l'API.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
@@ -126,104 +130,132 @@ function ProjectMystTravel() {
         </div>
       </section>
 
-      <section>
+      <section className="functionality container">
         <h2>Fonctionnalités</h2>
-
-        <h3>Fonctionnalités Utilisateurs</h3>
-        <ul>
-          <li>
-            <span className="bold">Connexion/Inscription :</span> Les
-            utilisateurs peuvent créer un compte ou se connecter pour accéder à
-            des fonctionnalités comme la réservation de destinations mystères ou
-            la soumission de formulaires pour des voyages sur-mesure.
-          </li>
-          <li>
-            <span className="bold">Filtrer les destinations mystères :</span>{" "}
-            Permet aux utilisateurs de trier les destinations selon différentes
-            catégories pour trouver plus facilement celles correspondant à leurs
-            attentes.
-          </li>
-          <li>
-            <span className="bold">Réservation d’un voyage :</span> Après avoir
-            sélectionné une destination mystère, les utilisateurs peuvent
-            demander une réservation en indiquant leurs dates et le nombre de
-            participants.
-          </li>
-          <li>
-            <span className="bold">Formulaire des voyages sur-mesure :</span>{" "}
-            Les utilisateurs peuvent faire une demande de voyage sur-mesure via
-            un formulaire, en précisant des critères comme le type d’expérience,
-            le budget, ou le climat.
-          </li>
-          <li>
-            <span className="bold">Formulaire de contact :</span> Un formulaire
-            permettant aux utilisateurs de poser leurs questions et d'entrer en
-            contact avec l'agence.
-          </li>
-        </ul>
-
-        <h3>Fonctionnalités Administrateurs</h3>
-        <ul>
-          <li>
-            <span className="bold">Gérer les utilisateurs :</span>{" "}
-            L’administrateur peut visualiser tous les utilisateurs inscrits et
-            les supprimer si nécessaire.
-          </li>
-          <li>
-            <span className="bold">Gérer les destinations mystères :</span>{" "}
-            L’administrateur peut ajouter, modifier ou supprimer des
-            destinations mystères et gérer leur visibilité sur le site.
-          </li>
-          <li>
-            <span className="bold">Gestion des réservations :</span>{" "}
-            L’administrateur peut consulter les demandes de réservation,
-            modifier leur statut ou supprimer celles annulées.
-          </li>
-          <li>
-            <span className="bold">Gérer les voyages sur-mesure :</span>{" "}
-            L’administrateur peut consulter et gérer les demandes de voyages
-            sur-mesure, ainsi que modifier leur statut ou les supprimer.
-          </li>
-          <li>
-            <span className="bold">Gestion des demandes d’informations :</span>{" "}
-            L’administrateur peut consulter, modifier le statut ou supprimer les
-            messages reçus via le formulaire de contact.
-          </li>
-        </ul>
+        <div className="functionality-user">
+          <div>
+            <h3>Fonctionnalités Utilisateurs</h3>
+            <FontAwesomeIcon icon={faUser} />
+          </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Connexion/Inscription :</span> Les
+              utilisateurs peuvent créer un compte ou se connecter pour accéder
+              à des fonctionnalités comme la réservation de destinations
+              mystères ou la soumission de formulaires pour des voyages
+              sur-mesure.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Filtrer les destinations mystères :</span>{" "}
+              Permet aux utilisateurs de trier les destinations selon
+              différentes catégories pour trouver plus facilement celles
+              correspondant à leurs attentes.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Réservation d’un voyage :</span> Après
+              avoir sélectionné une destination mystère, les utilisateurs
+              peuvent demander une réservation en indiquant leurs dates et le
+              nombre de participants.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Formulaire des voyages sur-mesure :</span>{" "}
+              Les utilisateurs peuvent faire une demande de voyage sur-mesure
+              via un formulaire, en précisant des critères comme le type
+              d’expérience, le budget, ou le climat.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Formulaire de contact :</span> Un
+              formulaire permettant aux utilisateurs de poser leurs questions et
+              d'entrer en contact avec l'agence.
+            </li>
+          </ul>
+        </div>
+        <div className="functionality-admin">
+          <div>
+            <h3>Fonctionnalités Administrateurs</h3>
+            <FontAwesomeIcon icon={faUserGear} />
+          </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Gérer les utilisateurs :</span>{" "}
+              L’administrateur peut visualiser tous les utilisateurs inscrits et
+              les supprimer si nécessaire.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Gérer les destinations mystères :</span>{" "}
+              L’administrateur peut ajouter, modifier ou supprimer des
+              destinations mystères et gérer leur visibilité sur le site.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Gestion des réservations :</span>{" "}
+              L’administrateur peut consulter les demandes de réservation,
+              modifier leur statut ou supprimer celles annulées.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Gérer les voyages sur-mesure :</span>{" "}
+              L’administrateur peut consulter et gérer les demandes de voyages
+              sur-mesure, ainsi que modifier leur statut ou les supprimer.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">
+                Gestion des demandes d’informations :
+              </span>{" "}
+              L’administrateur peut consulter, modifier le statut ou supprimer
+              les messages reçus via le formulaire de contact.
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section>
+      <section className="requirement container">
         <h2>Exigences respectées</h2>
-        <ul>
-          <li>
-            <span className="bold">Référencement SEO :</span> J’ai optimisé le
-            site pour les moteurs de recherche en ajoutant des balises meta et
-            title, en utilisant des balises HTML sémantiques et une approche
-            mobile-first.
-          </li>
-          <li>
-            <span className="bold">Accessibilité :</span> J’ai garanti une
-            expérience inclusive en utilisant une sémantique HTML appropriée,
-            des attributs ARIA, et en assurant un contraste des couleurs
-            conforme aux normes WCAG.
-          </li>
-          <li>
-            <span className="bold">Adaptabilité :</span> Le site est responsive
-            et compatible avec tous les appareils et navigateurs grâce à
-            l’utilisation de Flexbox, Grid, et d’images adaptatives.
-          </li>
-          <li>
-            <span className="bold">Éco-conception :</span> J’ai optimisé les
-            ressources en utilisant le format d’image WebP, en réduisant le
-            nombre de polices et en minifiant les fichiers CSS.
-          </li>
-          <li>
-            <span className="bold">Conformité RGPD :</span> Les données
-            utilisateurs sont protégées grâce à une politique de confidentialité
-            claire et à une collecte limitée et sécurisée des informations,
-            notamment en hachant les mots de passe.
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Référencement SEO :</span> J’ai optimisé le
+              site pour les moteurs de recherche en ajoutant des balises meta et
+              title, en utilisant des balises HTML sémantiques et une approche
+              mobile-first.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Accessibilité :</span> J’ai garanti une
+              expérience inclusive en utilisant une sémantique HTML appropriée,
+              des attributs ARIA, et en assurant un contraste des couleurs
+              conforme aux normes WCAG.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Adaptabilité :</span> Le site est
+              responsive et compatible avec tous les appareils et navigateurs
+              grâce à l’utilisation de Flexbox, Grid, et d’images adaptatives.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Éco-conception :</span> J’ai optimisé les
+              ressources en utilisant le format d’image WebP, en réduisant le
+              nombre de polices et en minifiant les fichiers CSS.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Conformité RGPD :</span> Les données
+              utilisateurs sont protégées grâce à une politique de
+              confidentialité claire et à une collecte limitée et sécurisée des
+              informations, notamment en hachant les mots de passe.
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
   );

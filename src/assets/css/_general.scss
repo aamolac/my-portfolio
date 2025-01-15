@@ -34,5 +34,15 @@ $white-title: #ffffff;
 }
 
 // RESPONSIVE
+$mobile-m: "screen and (min-width:375px)";
+$mobile-l: "screen and (min-width:425px)";
 $tablet: "screen and (min-width:768px)";
 $laptop: "screen and (min-width:1024px)";
+
+// MIXIN
+@mixin cards {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 2rem;
+}

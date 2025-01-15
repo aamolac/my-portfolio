@@ -8,7 +8,7 @@ import "./assets/css/style.css";
 
 createRoot(document.getElementById("root")).render(
   <MenuProvider>
-    <BrowserRouter basename="/my-portfolio">
+    <BrowserRouter basename="/my-portfolio/">
       <App />
     </BrowserRouter>
   </MenuProvider>

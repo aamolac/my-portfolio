@@ -81,7 +81,7 @@ function Portfolio() {
 
   return (
     <main>
-      <section className="banner">
+      <section className="banner container">
         <h1>Annaïg MOLAC</h1>
         <p>Développeuse Web FullStack</p>
         <div className="social-media">
@@ -101,9 +101,9 @@ function Portfolio() {
           </Link>
         </div>
       </section>
-      <section id="presentation">
+      <section id="presentation" className="container">
+        <h2>Présentation</h2>
         <div className="introduction">
-          <h2>Présentation</h2>
           <p>Je m'appelle Annaïg MOLAC, j'ai 27 ans et je viens de Bretagne.</p>
           <p>
             Après plusieurs années dans le domaine de la chimie et de la
@@ -125,98 +125,100 @@ function Portfolio() {
           <h3>Formation</h3>
           <p>Développeur Web FullStack - Titre RNCP 5 (équivalence bac +2)</p>
         </div>
-        <div className="techno">
+        <div className="techno-langage">
           <h3>Langages</h3>
           <div>
             <div>
               <p>HTML</p>
-              <img src="/src/assets/image/html-5.png" alt="logo HTML" />
+              <img src="./src/assets/image/html-5.png" alt="logo HTML" />
             </div>
             <div>
               <p>CSS</p>
-              <img src="/src/assets/image/css-3.png" alt="logo CSS" />
+              <img src="./src/assets/image/css-3.png" alt="logo CSS" />
             </div>
             <div>
               <p>SASS</p>
-              <img src="/src/assets/image/sass-logo.png" alt="logo SASS" />
+              <img src="./src/assets/image/sass-logo.png" alt="logo SASS" />
             </div>
             <div>
               <p>JavaScript</p>
-              <img src="/src/assets/image/js.png" alt="logo JavaScript" />
+              <img src="./src/assets/image/js.png" alt="logo JavaScript" />
             </div>
             <div>
               <p>React.JS</p>
-              <img src="/src/assets/image/react.png" alt="logo React.JS" />
+              <img src="./src/assets/image/react.png" alt="logo React.JS" />
             </div>
             <div>
               <p>Node.JS</p>
-              <img src="/src/assets/image/node-js.png" alt="logo Node.JS" />
+              <img src="./src/assets/image/node-js.jpeg" alt="logo Node.JS" />
             </div>
             <div>
               {/* <p>Express</p> */}
-              <img src="/src/assets/image/express.png" alt="logo Express" />
+              <img src="./src/assets/image/express.png" alt="logo Express" />
             </div>
             <div>
               {/* <p>MySQL</p> */}
-              <img src="/src/assets/image/my-sql.png" alt="logo MySQL" />
+              <img src="./src/assets/image/my-sql.png" alt="logo MySQL" />
             </div>
           </div>
         </div>
-        <div className="techno">
+        <div className="techno-tool">
           <h3>Outils</h3>
           <div>
             <div>
               <p>GitHub</p>
-              <img src="/src/assets/image/github.png" alt="logo GitHub" />
+              <img src="./src/assets/image/github.png" alt="logo GitHub" />
             </div>
             <div>
               <p>Visual Studio Code</p>
               <img
-                src="/src/assets/image/visual-studio-code.png"
+                src="./src/assets/image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
             </div>
             <div>
               <p>Postman</p>
-              <img src="/src/assets/image/postman.png" alt="logo Postman" />
+              <img src="./src/assets/image/postman.png" alt="logo Postman" />
             </div>
             <div>
               <p>Figma</p>
-              <img src="/src/assets/image/figma.png" alt="logo Figma" />
+              <img src="./src/assets/image/figma.png" alt="logo Figma" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="project">
+      <section id="project" className="container">
         <h2>Projets</h2>
-        <article>
-          <img
-            src="/src/assets/image/myst-travel-home.png"
-            alt="Image de la page d'accueil du site Myst'Travel"
-          />
-          <h3>Myst'Travel</h3>
-          <Link
-            to="/project-myst-travel"
-            onClick={scrollToTop}
-            aria-label="Aller sur la page de mon projet : Myst'Travel"
-          >
-            Voir le projet
-          </Link>
-        </article>
-        <article>
-          <h3>Mon Portfolio</h3>
-          <Link
-            to="/project-portfolio"
-            onClick={scrollToTop}
-            aria-label="Aller sur la page de mon projet : Portfolio"
-          >
-            Voir le projet
-          </Link>
-        </article>
+        <div>
+          <article>
+            <img
+              src="./src/assets/image/myst-travel-home.png"
+              alt="Image de la page d'accueil du site Myst'Travel"
+            />
+            <h3>Myst'Travel</h3>
+            <Link
+              to="/project-myst-travel"
+              onClick={scrollToTop}
+              aria-label="Aller sur la page de mon projet : Myst'Travel"
+            >
+              Voir le projet
+            </Link>
+          </article>
+          <article>
+            <h3>Mon Portfolio</h3>
+            <Link
+              to="/project-portfolio"
+              onClick={scrollToTop}
+              aria-label="Aller sur la page de mon projet : Portfolio"
+            >
+              Voir le projet
+            </Link>
+          </article>
+        </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" className="container">
         <h2>Contact</h2>
         <form onSubmit={submitHandler}>
           {msg && <p className="message">{msg}</p>}

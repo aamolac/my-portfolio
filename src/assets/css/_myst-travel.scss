@@ -32,15 +32,23 @@
   .front-end,
   .back-end,
   .tool {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 3rem;
-    padding: 3rem;
-    border-radius: 5%;
+    @include cards;
+    @media #{$tablet} {
+      padding: 3rem;
+      margin: 5rem;
+    }
     div {
-      display: flex;
-      justify-content: space-between;
+      @media #{$tablet} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+          padding-bottom: 0;
+        }
+      }
       div {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         img {
           max-width: 100%;
@@ -55,6 +63,99 @@
       svg {
         color: $light-blue;
       }
+    }
+  }
+  @media #{$laptop} {
+    h2 {
+      grid-area: title;
+    }
+    .front-end {
+      grid-area: front-end;
+    }
+    .back-end {
+      grid-area: back-end;
+    }
+    .tool {
+      grid-area: tool;
+    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      " title title"
+      " front-end back-end"
+      " tool tool";
+  }
+}
+
+.functionality {
+  .functionality-user,
+  .functionality-admin {
+    @include cards;
+    @media #{$tablet} {
+      padding: 3rem;
+      margin: 5rem;
+    }
+    div {
+      display: flex;
+      gap: 1rem;
+      svg {
+        color: $light-blue;
+        font-size: 4rem;
+      }
+      @media #{$tablet} {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        h3 {
+          padding-bottom: 0;
+        }
+      }
+    }
+    ul {
+      span,
+      svg {
+        color: $light-blue;
+      }
+    }
+  }
+
+  @media #{$laptop} {
+    h2 {
+      grid-area: title;
+    }
+    .functionality-user {
+      grid-area: user;
+      div {
+        align-items: center;
+        h3 {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .functionality-admin {
+      grid-area: admin;
+    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      " title title"
+      " user admin";
+  }
+}
+
+.requirement {
+  div {
+    @include cards;
+    @media #{$tablet} {
+      padding: 3rem;
+      margin: 5rem;
+    }
+  }
+  ul {
+    span,
+    svg {
+      color: $light-blue;
     }
   }
 }
