@@ -1,0 +1,18 @@
+// VARIABLES
+$white: #f5f5f5;
+$blue-night: #0d1b2a;
+$grey: #4d4d4d;
+$red-advert: #b22234;
+$header-footer: #14233c;
+$blue-button: #56a3d4;
+$white-title: #ffffff;
+
+// FONTS
+@font-face {
+  font-family: "Lora-Regular";
+  src: url("../font/Lora/static/Lora-Regular.ttf");
+}
+
+// RESPONSIVE
+$tablet: "screen and (min-width:768px)";
+$laptop: "screen and (min-width:1024px)";

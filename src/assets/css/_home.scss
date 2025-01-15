@@ -1,0 +1,72 @@
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/src/assets/image/dev-web.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  p {
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+// PRÉSENTATION
+#presentation {
+  p {
+    margin: 1.5rem 5rem 1.5rem 5rem;
+  }
+}
+
+// CONTACT
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+  margin: auto;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 0rem;
+  }
+  input {
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $grey;
+    margin-bottom: 0.7rem;
+    padding-left: 0.5rem;
+    height: 3rem;
+  }
+  textarea {
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $grey;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 0.5rem;
+    height: 10rem;
+  }
+  button {
+    background-color: $blue-night;
+    color: $white;
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $grey;
+    width: 50%;
+    display: block;
+    margin: 0.5rem auto;
+  }
+}

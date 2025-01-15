@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { MenuContext } from "../../store/ContextMenu.jsx";
 
@@ -38,13 +38,25 @@ function Header() {
     }
   }, [isTablet, isOpen, toggleMenu]);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header>
       <section
         className={`${isTablet ? "tablet-header" : "header-mobile"}`}
         aria-label={isTablet ? "En-tête pour tablette" : "En-tête pour mobile"}
       >
-        <h1>Annaïg MOLAC</h1>
+        <Link
+          to="/"
+          title="Aller à la page d'accueil"
+          onClick={scrollToTop}
+          aria-label="Aller à la page d'accueil"
+          className="name"
+        >
+          Annaïg MOLAC
+        </Link>
         {!isTablet ? (
           <div
             id="burger-menu"

@@ -6,9 +6,6 @@ function TitleUpdater() {
 
   useEffect(() => {
     switch (location.pathname) {
-      // case "/":
-      //   document.title = "Accueil - Myst'Travel";
-      //   break;
       case "/project-myst-travel":
         document.title = "Projet - Myst'Travel";
         break;
@@ -16,7 +13,7 @@ function TitleUpdater() {
         document.title = "Projet - Portfolio";
         break;
       default:
-        document.title = "Portfolio Annaïg Molac";
+        document.title = "Portfolio - Annaïg Molac";
     }
   }, [location]);
   // Ce composant n'a pas besoin de rendre quoi que ce soit

@@ -1,1 +1,63 @@
 @import "_reset";
+
+@import "_general";
+@import "_header-footer";
+@import "_home";
+@import "_myst-travel";
+@import "_portfolio";
+
+// STYLE GÉNÉRALE
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $blue-night;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $white-title;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+.message {
+  color: $red-advert;
+}
+
+p,
+li {
+  color: $white;
+  font-size: 1.6rem;
+  text-align: justify;
+  line-height: 3rem;
+}
+
+a {
+  color: $blue-button;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: inline-block;
+}

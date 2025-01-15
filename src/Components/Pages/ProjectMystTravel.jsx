@@ -1,7 +1,9 @@
 function ProjectMystTravel() {
   return (
     <main>
-      <h2>Projet - Myst'Travel</h2>
+      <section className="banner-myst-travel">
+        <h1>Projet - Myst'Travel</h1>
+      </section>
       <section>
         <p>
           Dans le cadre de ma formation Développeur Web FullStack à la 3W
@@ -22,10 +24,10 @@ function ProjectMystTravel() {
         </p>
       </section>
       <section>
-        <h3> Langages et technologies utilisés</h3>
+        <h2> Langages et technologies utilisés</h2>
         <ul>
           <li>
-            Frontend :
+            Front-end :
             <ul>
               <li>
                 HTML/CSS : pour la structure et le style des pages, avec SASS
@@ -42,7 +44,7 @@ function ProjectMystTravel() {
             </ul>
           </li>
           <li>
-            Backend :
+            Back-end :
             <ul>
               <li>
                 Node.js et Express : pour la création d’une API rapide et légère
@@ -79,182 +81,95 @@ function ProjectMystTravel() {
       </section>
 
       <section>
-        <h3>Fonctionnalités</h3>
+        <h2>Fonctionnalités</h2>
 
-        <h4>Fonctionnalités Utilisateurs</h4>
+        <h3>Fonctionnalités Utilisateurs</h3>
         <ul>
           <li>
-            <strong>Connexion/Inscription :</strong> Les utilisateurs peuvent
-            créer un compte ou se connecter pour accéder à des fonctionnalités
-            comme la réservation de destinations mystères ou la soumission de
-            formulaires pour des voyages sur-mesure.
+            Connexion/Inscription : Les utilisateurs peuvent créer un compte ou
+            se connecter pour accéder à des fonctionnalités comme la réservation
+            de destinations mystères ou la soumission de formulaires pour des
+            voyages sur-mesure.
           </li>
           <li>
-            <strong>Filtrer les destinations mystères :</strong> Permet aux
-            utilisateurs de trier les destinations selon différentes catégories
-            pour trouver plus facilement celles correspondant à leurs attentes.
+            Filtrer les destinations mystères : Permet aux utilisateurs de trier
+            les destinations selon différentes catégories pour trouver plus
+            facilement celles correspondant à leurs attentes.
           </li>
           <li>
-            <strong>Réservation d’un voyage :</strong> Après avoir sélectionné
-            une destination mystère, les utilisateurs peuvent demander une
-            réservation en indiquant leurs dates et le nombre de participants.
+            Réservation d’un voyage : Après avoir sélectionné une destination
+            mystère, les utilisateurs peuvent demander une réservation en
+            indiquant leurs dates et le nombre de participants.
           </li>
           <li>
-            <strong>Formulaire des voyages sur-mesure :</strong> Les
-            utilisateurs peuvent faire une demande de voyage sur-mesure via un
-            formulaire, en précisant des critères comme le type d’expérience, le
-            budget, ou le climat.
+            Formulaire des voyages sur-mesure : Les utilisateurs peuvent faire
+            une demande de voyage sur-mesure via un formulaire, en précisant des
+            critères comme le type d’expérience, le budget, ou le climat.
           </li>
           <li>
-            <strong>Formulaire de contact :</strong> Un formulaire permettant
-            aux utilisateurs de poser leurs questions et d'entrer en contact
-            avec l'agence.
+            Formulaire de contact : Un formulaire permettant aux utilisateurs de
+            poser leurs questions et d'entrer en contact avec l'agence.
           </li>
         </ul>
 
-        <h4>Fonctionnalités Administrateurs</h4>
+        <h3>Fonctionnalités Administrateurs</h3>
         <ul>
           <li>
-            <strong>Gérer les utilisateurs :</strong> L’administrateur peut
-            visualiser tous les utilisateurs inscrits et les supprimer si
-            nécessaire.
+            Gérer les utilisateurs : L’administrateur peut visualiser tous les
+            utilisateurs inscrits et les supprimer si nécessaire.
           </li>
           <li>
-            <strong>Gérer les destinations mystères :</strong> L’administrateur
-            peut ajouter, modifier ou supprimer des destinations mystères et
-            gérer leur visibilité sur le site.
+            Gérer les destinations mystères : L’administrateur peut ajouter,
+            modifier ou supprimer des destinations mystères et gérer leur
+            visibilité sur le site.
           </li>
           <li>
-            <strong>Gestion des réservations :</strong> L’administrateur peut
-            consulter les demandes de réservation, modifier leur statut ou
-            supprimer celles annulées.
+            Gestion des réservations : L’administrateur peut consulter les
+            demandes de réservation, modifier leur statut ou supprimer celles
+            annulées.
           </li>
           <li>
-            <strong>Gérer les voyages sur-mesure :</strong> L’administrateur
-            peut consulter et gérer les demandes de voyages sur-mesure, ainsi
-            que modifier leur statut ou les supprimer.
+            Gérer les voyages sur-mesure : L’administrateur peut consulter et
+            gérer les demandes de voyages sur-mesure, ainsi que modifier leur
+            statut ou les supprimer.
           </li>
           <li>
-            <strong>Gestion des demandes d’informations :</strong>{" "}
-            L’administrateur peut consulter, modifier le statut ou supprimer les
-            messages reçus via le formulaire de contact.
+            Gestion des demandes d’informations : L’administrateur peut
+            consulter, modifier le statut ou supprimer les messages reçus via le
+            formulaire de contact.
           </li>
         </ul>
       </section>
 
       <section>
-        <h3>Exigences respectées</h3>
-
-        <h4>Accessibilité</h4>
-        <p>
-          Le projet a été conçu pour être accessible à tous, y compris aux
-          personnes handicapées. Les points clés incluent :
-        </p>
+        <h2>Exigences respectées</h2>
         <ul>
           <li>
-            <strong>Navigation au clavier</strong> : L’ensemble du site est
-            navigable via le clavier.
+            Référencement SEO : J’ai optimisé le site pour les moteurs de
+            recherche en ajoutant des balises meta et title, en utilisant des
+            balises HTML sémantiques et une approche mobile-first.
           </li>
           <li>
-            <strong>Couleurs contrastées</strong> : Les couleurs et contrastes
-            ont été choisis pour garantir une bonne lisibilité, même pour les
-            personnes malvoyantes.
+            Accessibilité : J’ai garanti une expérience inclusive en utilisant
+            une sémantique HTML appropriée, des attributs ARIA, et en assurant
+            un contraste des couleurs conforme aux normes WCAG.
           </li>
           <li>
-            <strong>Texte alternatif pour les images</strong> : Des descriptions
-            textuelles ont été ajoutées à toutes les images pour faciliter la
-            navigation pour les utilisateurs de lecteurs d’écran.
+            Adaptabilité : Le site est responsive et compatible avec tous les
+            appareils et navigateurs grâce à l’utilisation de Flexbox, Grid, et
+            d’images adaptatives.
+          </li>
+          <li>
+            Éco-conception : J’ai optimisé les ressources en utilisant le format
+            d’image WebP, en réduisant le nombre de polices et en minifiant les
+            fichiers CSS.
+          </li>
+          <li>
+            Conformité RGPD : Les données utilisateurs sont protégées grâce à
+            une politique de confidentialité claire et à une collecte limitée et
+            sécurisée des informations, notamment en hachant les mots de passe.
           </li>
         </ul>
-
-        <h4>Adaptabilité</h4>
-        <p>
-          Le site est <strong>responsive</strong> et s’adapte parfaitement à
-          tous les types d’écrans :
-        </p>
-        <ul>
-          <li>
-            <strong>Mobile-first</strong> : Le design est optimisé pour les
-            appareils mobiles, en utilisant des <strong>media queries</strong>{" "}
-            pour ajuster la mise en page en fonction de la taille de l’écran.
-          </li>
-          <li>
-            <strong>Utilisation de flexbox et grid</strong> : Ces techniques
-            permettent d'organiser les contenus de manière flexible et fluide.
-          </li>
-        </ul>
-
-        <h4>Éco-conception</h4>
-        <p>
-          Le projet a été conçu dans une optique de{" "}
-          <strong>réduction de l'empreinte écologique</strong>, en privilégiant
-          :
-        </p>
-        <ul>
-          <li>
-            <strong>Optimisation des images</strong> : Toutes les images sont
-            compressées pour réduire leur taille et ainsi diminuer les besoins
-            en bande passante.
-          </li>
-          <li>
-            <strong>Code léger</strong> : Le code JavaScript et CSS a été
-            optimisé pour réduire le nombre de requêtes et améliorer les
-            performances du site.
-          </li>
-        </ul>
-
-        <h4>Référencement SEO</h4>
-        <p>
-          Le site a été conçu en respectant les bonnes pratiques du
-          référencement pour améliorer sa visibilité sur les moteurs de
-          recherche :
-        </p>
-        <ul>
-          <li>
-            <strong>Optimisation des balises meta</strong> : Chaque page utilise
-            des balises title et meta description adaptées.
-          </li>
-          <li>
-            <strong>Structure HTML sémantique</strong> : Le code HTML utilise
-            les balises sémantiques appropriées pour améliorer l’indexation par
-            les moteurs de recherche.
-          </li>
-          <li>
-            <strong>URL propres et lisibles</strong> : Les URLs sont optimisées
-            pour être compréhensibles et contenir des mots-clés.
-          </li>
-        </ul>
-
-        <h4>Sécurité et RGPD</h4>
-        <p>
-          La sécurité des utilisateurs a été une priorité, notamment en ce qui
-          concerne la gestion des données personnelles :
-        </p>
-        <ul>
-          <li>
-            <strong>Authentification sécurisée</strong> : Le mot de passe des
-            utilisateurs est haché à l'aide de <strong>bcrypt</strong> pour
-            garantir la confidentialité des informations.
-          </li>
-          <li>
-            <strong>Conformité RGPD</strong> : Le site respecte les normes du{" "}
-            <strong>RGPD</strong> en matière de gestion des données
-            personnelles, avec des mécanismes de consentement clairs et une
-            gestion transparente des informations collectées.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Conclusion</h3>
-        <p>
-          Myst'Travel est un projet qui m'a permis de développer mes compétences
-          techniques en développement web, tout en prenant en compte des aspects
-          cruciaux tels que l'accessibilité, l'adaptabilité, l'éco-conception,
-          la sécurité et le SEO. Ce projet a été un excellent moyen pour moi de
-          démontrer mes capacités à créer une application web moderne et
-          responsable, tout en répondant aux attentes des utilisateurs et des
-          exigences du marché.
-        </p>
       </section>
     </main>
   );

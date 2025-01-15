@@ -1,12 +1,106 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Portfolio() {
+  const [msg, setMsg] = useState("");
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
+  // Initialiser EmailJS
+  React.useEffect(() => {
+    emailjs.init("user_"); // Remplacez par votre User ID d'EmailJS
+  }, []);
+
+  // Validation du formulaire
+  const validateForm = (event) => {
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+
+    // Validation de tous les champs requis
+    if (!name || !email || !message) {
+      setMsg("Tous les champs sont requis.");
+      return false;
+    }
+
+    // Validation de l'email
+    const emailValidate = /.+@.+\..+/;
+    if (!emailValidate.test(email)) {
+      setMsg("L'adresse email n'est pas valide.");
+      return false;
+    }
+
+    // Vérification des espaces internes dans l'email
+    if (email.includes(" ")) {
+      setMsg("L'adresse email ne doit pas contenir d'espaces.");
+      return false;
+    }
+
+    // Validation du message (doit contenir au moins 10 caractères)
+    if (!message || message.trim().length < 10) {
+      setMsg("Le message doit contenir au moins 10 caractères.");
+      return false;
+    }
+
+    return true; //
+  };
+
+  // Gérer la soumission du formulaire
+  const submitHandler = async (e) => {
+    // Empêche le rechargement de la page lors de la soumission du formulaire
+    e.preventDefault();
+
+    if (!validateForm(e)) {
+      // Ne pas soumettre si le formulaire est invalide
+      return;
+    }
+
+    // Si le formulaire est valide, appeler l'envoi du message
+    sendEmail(e.target);
+  };
+
+  // Gérer l'envoi du formulaire via EmailJS
+  const sendEmail = (form) => {
+    const formData = new FormData(form);
+
+    emailjs
+      .sendForm("service_rnfdhfd", "template_lqm1i3n", formData)
+      .then(function (response) {
+        setMsg("Message envoyé avec succès !");
+      })
+      .catch(function (error) {
+        setMsg("Erreur lors de l'envoi du message : " + error.text);
+      });
+  };
+
   return (
     <main>
+      <section className="banner">
+        <h1>Annaïg MOLAC</h1>
+        <p>Développeuse Web FullStack</p>
+        <div className="social-media">
+          <Link
+            to="https://www.linkedin.com/in/annaïg-molac"
+            target="_blank"
+            aria-label="Aller sur mon profil Linkedin"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </Link>
+          <Link
+            to="https://github.com/aamolac"
+            target="_blank"
+            aria-label="Aller sur mon profil GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
+        </div>
+      </section>
       <section id="presentation">
         <h2>Présentation</h2>
         <p>Je m'appelle Annaïg MOLAC, j'ai 27 ans et je viens de Bretagne.</p>
@@ -44,6 +138,7 @@ function Portfolio() {
         <p>Postman</p>
         <p>Figma</p>
       </section>
+
       <section id="project">
         <h2>Projets</h2>
         <article>
@@ -67,19 +162,20 @@ function Portfolio() {
           </Link>
         </article>
       </section>
+
       <section id="contact">
         <h2>Contact</h2>
-
-        <form>
-          <label for="name">Votre nom</label>
+        <form onSubmit={submitHandler}>
+          {msg && <p className="message">{msg}</p>}
+          <label htmlFor="name">Votre nom</label>
           <input
-            type="name"
+            type="text"
             id="name"
             name="name"
             placeholder="Entrer votre nom"
             required
           />
-          <label for="email">Votre adresse email</label>
+          <label htmlFor="email">Votre adresse email</label>
           <input
             type="email"
             id="email"
@@ -87,7 +183,7 @@ function Portfolio() {
             placeholder="Entrer votre adresse mail"
             required
           />
-          <label for="message">Votre message</label>
+          <label htmlFor="message">Votre message</label>
           <textarea
             id="message"
             name="message"
