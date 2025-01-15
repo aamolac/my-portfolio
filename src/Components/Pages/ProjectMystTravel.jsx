@@ -1,10 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 function ProjectMystTravel() {
   return (
     <main>
       <section className="banner-myst-travel">
         <h1>Projet - Myst'Travel</h1>
       </section>
-      <section>
+      <section className="presentation-myst-travel">
         <p>
           Dans le cadre de ma formation Développeur Web FullStack à la 3W
           Academy, j'ai créé un projet intitulé Myst'Travel, un site web d'une
@@ -23,61 +26,104 @@ function ProjectMystTravel() {
           référencement SEO.
         </p>
       </section>
-      <section>
+      <section className="screen-page">
+        <img
+          src="/src/assets/image/myst-travel-home.png"
+          alt="Image de la page d'accueil du site Myst'Travel"
+        />
+      </section>
+      <section className="langage-techno">
         <h2> Langages et technologies utilisés</h2>
-        <ul>
-          <li>
-            Front-end :
-            <ul>
-              <li>
-                HTML/CSS : pour la structure et le style des pages, avec SASS
-                pour la réutilisation grâce aux variables et mixins.
-              </li>
-              <li>
-                JavaScript : pour ajouter des fonctionnalités interactives et
-                dynamiser l'expérience utilisateur.
-              </li>
-              <li>
-                React : pour une interface dynamique, avec une gestion d'état
-                via le Context (préféré à Redux pour sa simplicité).
-              </li>
-            </ul>
-          </li>
-          <li>
-            Back-end :
-            <ul>
-              <li>
-                Node.js et Express : pour la création d’une API rapide et légère
-                afin de gérer les requêtes.
-              </li>
-              <li>
-                MySQL : pour la gestion des données utilisateurs, destinations
-                et réservations, géré via PHPMyAdmin.
-              </li>
-            </ul>
-          </li>
-          <li>
-            Outils :
-            <ul>
-              <li>
-                Visual Studio Code : comme éditeur de code principal pour le
-                développement.
-              </li>
-              <li>
-                Postman et ThunderClient : pour tester et vérifier les routes de
-                l'API.
-              </li>
-              <li>
-                GitHub : pour le contrôle de version et la gestion collaborative
-                du projet.
-              </li>
-              <li>
-                Figma : pour la création des wireframes adaptés aux formats
-                Ordinateur, Tablette et Mobile.
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div className="front-end">
+          <div>
+            <h3>Front-end</h3>
+            <div>
+              <img src="/src/assets/image/html-5.png" alt="logo HTML" />
+              <img src="/src/assets/image/css-3.png" alt="logo CSS" />
+              <img src="/src/assets/image/sass-logo.png" alt="logo SASS" />
+              <img src="/src/assets/image/js.png" alt="logo JavaScript" />
+              <img src="/src/assets/image/react.png" alt="logo React.JS" />
+            </div>
+          </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">HTML/CSS :</span> pour la structure et le
+              style des pages, avec SASS pour la réutilisation grâce aux
+              variables et mixins.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">JavaScript :</span> pour ajouter des
+              fonctionnalités interactives et dynamiser l'expérience
+              utilisateur.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">React :</span> pour une interface
+              dynamique, avec une gestion d'état via le Context (préféré à Redux
+              pour sa simplicité).
+            </li>
+          </ul>
+        </div>
+        <div className="back-end">
+          <div>
+            <h3>Back-end</h3>
+            <div>
+              <img src="/src/assets/image/node-js.png" alt="logo Node.JS" />
+              <img src="/src/assets/image/express.png" alt="logo Express" />
+              <img src="/src/assets/image/my-sql.png" alt="logo MySQL" />
+            </div>
+          </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Node.js et Express :</span> pour la
+              création d’une API rapide et légère afin de gérer les requêtes.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">MySQL :</span> pour la gestion des données
+              utilisateurs, destinations et réservations, géré via PHPMyAdmin.
+            </li>
+          </ul>
+        </div>
+        <div className="tool">
+          <div>
+            <h3>Outils</h3>
+            <div>
+              <img
+                src="/src/assets/image/visual-studio-code.png"
+                alt="logo Visual Studio Code"
+              />
+              <img src="/src/assets/image/github.png" alt="logo GitHub" />
+              <img src="/src/assets/image/postman.png" alt="logo Postman" />
+              <img src="/src/assets/image/figma.png" alt="logo Figma" />
+            </div>
+          </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Visual Studio Code :</span> comme éditeur
+              de code principal pour le développement.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Postman et ThunderClient :</span> pour
+              tester et vérifier les routes de l'API.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">GitHub :</span> pour le contrôle de version
+              et la gestion collaborative du projet.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">Figma :</span> pour la création des
+              wireframes adaptés aux formats Ordinateur, Tablette et Mobile.
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section>
@@ -86,57 +132,62 @@ function ProjectMystTravel() {
         <h3>Fonctionnalités Utilisateurs</h3>
         <ul>
           <li>
-            Connexion/Inscription : Les utilisateurs peuvent créer un compte ou
-            se connecter pour accéder à des fonctionnalités comme la réservation
-            de destinations mystères ou la soumission de formulaires pour des
-            voyages sur-mesure.
+            <span className="bold">Connexion/Inscription :</span> Les
+            utilisateurs peuvent créer un compte ou se connecter pour accéder à
+            des fonctionnalités comme la réservation de destinations mystères ou
+            la soumission de formulaires pour des voyages sur-mesure.
           </li>
           <li>
-            Filtrer les destinations mystères : Permet aux utilisateurs de trier
-            les destinations selon différentes catégories pour trouver plus
-            facilement celles correspondant à leurs attentes.
+            <span className="bold">Filtrer les destinations mystères :</span>{" "}
+            Permet aux utilisateurs de trier les destinations selon différentes
+            catégories pour trouver plus facilement celles correspondant à leurs
+            attentes.
           </li>
           <li>
-            Réservation d’un voyage : Après avoir sélectionné une destination
-            mystère, les utilisateurs peuvent demander une réservation en
-            indiquant leurs dates et le nombre de participants.
+            <span className="bold">Réservation d’un voyage :</span> Après avoir
+            sélectionné une destination mystère, les utilisateurs peuvent
+            demander une réservation en indiquant leurs dates et le nombre de
+            participants.
           </li>
           <li>
-            Formulaire des voyages sur-mesure : Les utilisateurs peuvent faire
-            une demande de voyage sur-mesure via un formulaire, en précisant des
-            critères comme le type d’expérience, le budget, ou le climat.
+            <span className="bold">Formulaire des voyages sur-mesure :</span>{" "}
+            Les utilisateurs peuvent faire une demande de voyage sur-mesure via
+            un formulaire, en précisant des critères comme le type d’expérience,
+            le budget, ou le climat.
           </li>
           <li>
-            Formulaire de contact : Un formulaire permettant aux utilisateurs de
-            poser leurs questions et d'entrer en contact avec l'agence.
+            <span className="bold">Formulaire de contact :</span> Un formulaire
+            permettant aux utilisateurs de poser leurs questions et d'entrer en
+            contact avec l'agence.
           </li>
         </ul>
 
         <h3>Fonctionnalités Administrateurs</h3>
         <ul>
           <li>
-            Gérer les utilisateurs : L’administrateur peut visualiser tous les
-            utilisateurs inscrits et les supprimer si nécessaire.
+            <span className="bold">Gérer les utilisateurs :</span>{" "}
+            L’administrateur peut visualiser tous les utilisateurs inscrits et
+            les supprimer si nécessaire.
           </li>
           <li>
-            Gérer les destinations mystères : L’administrateur peut ajouter,
-            modifier ou supprimer des destinations mystères et gérer leur
-            visibilité sur le site.
+            <span className="bold">Gérer les destinations mystères :</span>{" "}
+            L’administrateur peut ajouter, modifier ou supprimer des
+            destinations mystères et gérer leur visibilité sur le site.
           </li>
           <li>
-            Gestion des réservations : L’administrateur peut consulter les
-            demandes de réservation, modifier leur statut ou supprimer celles
-            annulées.
+            <span className="bold">Gestion des réservations :</span>{" "}
+            L’administrateur peut consulter les demandes de réservation,
+            modifier leur statut ou supprimer celles annulées.
           </li>
           <li>
-            Gérer les voyages sur-mesure : L’administrateur peut consulter et
-            gérer les demandes de voyages sur-mesure, ainsi que modifier leur
-            statut ou les supprimer.
+            <span className="bold">Gérer les voyages sur-mesure :</span>{" "}
+            L’administrateur peut consulter et gérer les demandes de voyages
+            sur-mesure, ainsi que modifier leur statut ou les supprimer.
           </li>
           <li>
-            Gestion des demandes d’informations : L’administrateur peut
-            consulter, modifier le statut ou supprimer les messages reçus via le
-            formulaire de contact.
+            <span className="bold">Gestion des demandes d’informations :</span>{" "}
+            L’administrateur peut consulter, modifier le statut ou supprimer les
+            messages reçus via le formulaire de contact.
           </li>
         </ul>
       </section>
@@ -145,29 +196,32 @@ function ProjectMystTravel() {
         <h2>Exigences respectées</h2>
         <ul>
           <li>
-            Référencement SEO : J’ai optimisé le site pour les moteurs de
-            recherche en ajoutant des balises meta et title, en utilisant des
-            balises HTML sémantiques et une approche mobile-first.
+            <span className="bold">Référencement SEO :</span> J’ai optimisé le
+            site pour les moteurs de recherche en ajoutant des balises meta et
+            title, en utilisant des balises HTML sémantiques et une approche
+            mobile-first.
           </li>
           <li>
-            Accessibilité : J’ai garanti une expérience inclusive en utilisant
-            une sémantique HTML appropriée, des attributs ARIA, et en assurant
-            un contraste des couleurs conforme aux normes WCAG.
+            <span className="bold">Accessibilité :</span> J’ai garanti une
+            expérience inclusive en utilisant une sémantique HTML appropriée,
+            des attributs ARIA, et en assurant un contraste des couleurs
+            conforme aux normes WCAG.
           </li>
           <li>
-            Adaptabilité : Le site est responsive et compatible avec tous les
-            appareils et navigateurs grâce à l’utilisation de Flexbox, Grid, et
-            d’images adaptatives.
+            <span className="bold">Adaptabilité :</span> Le site est responsive
+            et compatible avec tous les appareils et navigateurs grâce à
+            l’utilisation de Flexbox, Grid, et d’images adaptatives.
           </li>
           <li>
-            Éco-conception : J’ai optimisé les ressources en utilisant le format
-            d’image WebP, en réduisant le nombre de polices et en minifiant les
-            fichiers CSS.
+            <span className="bold">Éco-conception :</span> J’ai optimisé les
+            ressources en utilisant le format d’image WebP, en réduisant le
+            nombre de polices et en minifiant les fichiers CSS.
           </li>
           <li>
-            Conformité RGPD : Les données utilisateurs sont protégées grâce à
-            une politique de confidentialité claire et à une collecte limitée et
-            sécurisée des informations, notamment en hachant les mots de passe.
+            <span className="bold">Conformité RGPD :</span> Les données
+            utilisateurs sont protégées grâce à une politique de confidentialité
+            claire et à une collecte limitée et sécurisée des informations,
+            notamment en hachant les mots de passe.
           </li>
         </ul>
       </section>

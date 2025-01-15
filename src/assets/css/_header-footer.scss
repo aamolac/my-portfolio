@@ -3,6 +3,7 @@ footer {
   background-color: $header-footer;
   .name {
     font-size: 3rem;
+    font-family: "Poppins-Medium";
     color: $white-title;
     padding: 2rem;
   }
@@ -49,10 +50,6 @@ header {
             border-radius: 1rem;
           }
         }
-        .active {
-          background-color: $white;
-          color: $blue-night;
-        }
       }
       // Navigation cachée par défaut
       nav {
@@ -81,10 +78,6 @@ header {
           background-color: $white;
           color: $blue-night;
         }
-      }
-      .active {
-        background-color: $white;
-        color: $blue-night;
       }
       @media #{$laptop} {
         a {
@@ -118,12 +111,6 @@ footer {
     a {
       padding: 1rem;
       font-size: 5rem;
-    }
-    @media #{$tablet} {
-      grid-area: social-media;
-      width: 100%;
-      margin: 3rem auto;
-      padding: 0;
     }
   }
 }

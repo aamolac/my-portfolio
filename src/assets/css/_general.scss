@@ -4,13 +4,33 @@ $blue-night: #0d1b2a;
 $grey: #4d4d4d;
 $red-advert: #b22234;
 $header-footer: #14233c;
-$blue-button: #56a3d4;
+$light-blue: #56a3d4;
 $white-title: #ffffff;
 
 // FONTS
 @font-face {
   font-family: "Lora-Regular";
-  src: url("../font/Lora/static/Lora-Regular.ttf");
+  src: url("../fonts/Lora/static/Lora-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lora-Medium";
+  src: url("../fonts/Lora/static/Lora-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("../fonts/Lora/static/Lora-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
 }
 
 // RESPONSIVE

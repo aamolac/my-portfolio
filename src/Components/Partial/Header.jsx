@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { MenuContext } from "../../store/ContextMenu.jsx";
 
@@ -42,6 +42,15 @@ function Header() {
     window.scrollTo(0, 0);
   };
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    console.log("Scrolling to:", id, "Element found:", !!element);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      toggleMenu(); // Fermer le menu après le clic sur un lien
+    }
+  };
+
   return (
     <header>
       <section
@@ -71,22 +80,49 @@ function Header() {
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
             />
-            {isOpen && <Navigation />}
+            {isOpen && (
+              <nav>
+                <a
+                  onClick={() => handleScroll("presentation")}
+                  aria-label="Aller sur la section Présentation"
+                >
+                  Présentation
+                </a>
+                <a
+                  onClick={() => handleScroll("project")}
+                  aria-label="Aller sur la section Projets"
+                >
+                  Projets
+                </a>
+                <a
+                  onClick={() => handleScroll("contact")}
+                  aria-label="Aller sur la section Contact"
+                >
+                  Contact
+                </a>
+              </nav>
+            )}
           </div>
         ) : (
           <nav>
-            <NavLink
-              to={"/#presentation"}
+            <a
+              onClick={() => handleScroll("presentation")}
               aria-label="Aller sur la section Présentation"
             >
               Présentation
-            </NavLink>
-            <NavLink to={"/#project"} aria-label="Aller sur la section Projets">
+            </a>
+            <a
+              onClick={() => handleScroll("project")}
+              aria-label="Aller sur la section Projets"
+            >
               Projets
-            </NavLink>
-            <NavLink to={"/#contact"} aria-label="Aller sur la section Contact">
+            </a>
+            <a
+              onClick={() => handleScroll("contact")}
+              aria-label="Aller sur la section Contact"
+            >
               Contact
-            </NavLink>
+            </a>
           </nav>
         )}
       </section>

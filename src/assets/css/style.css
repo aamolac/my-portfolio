@@ -132,7 +132,23 @@ table {
 
 @font-face {
   font-family: "Lora-Regular";
-  src: url("../font/Lora/static/Lora-Regular.ttf");
+  src: url("../fonts/Lora/static/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "Lora-Medium";
+  src: url("../fonts/Lora/static/Lora-Medium.ttf");
+}
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("../fonts/Lora/static/Lora-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
 }
 header,
 footer {
@@ -141,6 +157,7 @@ footer {
 header .name,
 footer .name {
   font-size: 3rem;
+  font-family: "Poppins-Medium";
   color: #ffffff;
   padding: 2rem;
 }
@@ -181,10 +198,6 @@ header .header-mobile #burger-menu.open nav a {
   transition: color 0.3s;
   border-radius: 1rem;
 }
-header .header-mobile #burger-menu.open .active {
-  background-color: #f5f5f5;
-  color: #0d1b2a;
-}
 header .header-mobile #burger-menu nav {
   display: none;
 }
@@ -209,10 +222,6 @@ header .tablet-header nav a {
     background-color: #f5f5f5;
     color: #0d1b2a;
   }
-}
-header .tablet-header nav .active {
-  background-color: #f5f5f5;
-  color: #0d1b2a;
 }
 @media screen and (min-width:1024px) {
   header .tablet-header nav a {
@@ -246,14 +255,6 @@ footer .social-media a {
   padding: 1rem;
   font-size: 5rem;
 }
-@media screen and (min-width:768px) {
-  footer .social-media {
-    grid-area: social-media;
-    width: 100%;
-    margin: 3rem auto;
-    padding: 0;
-  }
-}
 
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/src/assets/image/dev-web.png");
@@ -265,54 +266,145 @@ footer .social-media a {
   align-items: center;
   height: 40rem;
 }
+.banner h1 {
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
 .banner p {
   font-size: 2rem;
 }
-
-h1 {
-  font-size: 3rem;
-  padding-bottom: 1rem;
+.banner .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+}
+.banner .social-media a {
+  padding: 1rem;
+  font-size: 5rem;
 }
 
-#presentation p {
-  margin: 1.5rem 5rem 1.5rem 5rem;
+#presentation .introduction p {
+  margin: 1.5rem 3rem 1.5rem 3rem;
+}
+#presentation h2,
+#presentation h3 {
+  text-align: center;
+}
+#presentation h3 {
+  text-decoration: underline;
+}
+#presentation .training,
+#presentation .techno {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 5%;
+}
+#presentation .training p,
+#presentation .techno p {
+  text-align: center;
+}
+#presentation .techno div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#presentation .techno div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #0d1b2a;
+  border-radius: 8%;
+  max-width: 20rem;
+}
+#presentation .techno div div img {
+  max-width: 100%;
+  max-height: 4rem;
+  height: auto;
 }
 
-form {
+#project {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 5%;
+}
+#project article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  margin: 2rem auto 5rem auto;
+  background-color: #0d1b2a;
+  border-radius: 8%;
+}
+#project article img {
+  max-width: 100%;
+  max-height: 100rem;
+  height: auto;
+  border-radius: 5%;
+}
+#project article a {
+  background-color: #56a3d4;
+  color: #f5f5f5;
+  font-size: 1.6rem;
+  font-family: "Lora-Medium";
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #4d4d4d;
+  width: 30%;
+  display: block;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+#contact form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 70%;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 80%;
   margin: auto;
   padding: 2rem;
   border-radius: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-form label {
+#contact form label {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Lora-Bold";
+  color: #f5f5f5;
   padding: 0.5rem 0rem;
 }
-form input {
+#contact form input {
   font-size: 1.6rem;
+  font-family: "Lora-Regular";
   border-radius: 0.5rem;
   border: 0.1rem solid #4d4d4d;
   margin-bottom: 0.7rem;
   padding-left: 0.5rem;
   height: 3rem;
 }
-form textarea {
+#contact form textarea {
   font-size: 1.6rem;
+  font-family: "Lora-Regular";
   border-radius: 0.5rem;
   border: 0.1rem solid #4d4d4d;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.5rem;
   height: 10rem;
 }
-form button {
-  background-color: #0d1b2a;
+#contact form button {
+  background-color: #56a3d4;
   color: #f5f5f5;
   font-size: 1.6rem;
+  font-family: "Lora-Medium";
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #4d4d4d;
@@ -320,9 +412,16 @@ form button {
   display: block;
   margin: 0.5rem auto;
 }
+@media screen and (min-width:1024px) {
+  #contact form button:hover {
+    background-color: #f5f5f5;
+    color: #56a3d4;
+    border: 0.3rem solid #56a3d4;
+  }
+}
 
 .banner-myst-travel {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/src/assets/image/myst-travel-project.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -330,6 +429,61 @@ form button {
   justify-content: center;
   align-items: center;
   height: 40rem;
+}
+.banner-myst-travel h1 {
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+.presentation-myst-travel p {
+  margin: 3rem;
+}
+
+.screen-page img {
+  display: block;
+  width: 80%;
+  margin: 2rem auto 0 auto;
+}
+
+.langage-techno .front-end,
+.langage-techno .back-end,
+.langage-techno .tool {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem;
+  padding: 3rem;
+  border-radius: 5%;
+}
+.langage-techno .front-end div,
+.langage-techno .back-end div,
+.langage-techno .tool div {
+  display: flex;
+  justify-content: space-between;
+}
+.langage-techno .front-end div div,
+.langage-techno .back-end div div,
+.langage-techno .tool div div {
+  display: flex;
+  gap: 1rem;
+}
+.langage-techno .front-end div div img,
+.langage-techno .back-end div div img,
+.langage-techno .tool div div img {
+  max-width: 100%;
+  max-height: 4rem;
+  height: auto;
+}
+.langage-techno .front-end ul,
+.langage-techno .back-end ul,
+.langage-techno .tool ul {
+  margin-top: 2rem;
+}
+.langage-techno .front-end ul span,
+.langage-techno .front-end ul svg,
+.langage-techno .back-end ul span,
+.langage-techno .back-end ul svg,
+.langage-techno .tool ul span,
+.langage-techno .tool ul svg {
+  color: #56a3d4;
 }
 
 * {
@@ -346,11 +500,19 @@ body {
   background-color: #0d1b2a;
 }
 
+@media screen and (min-width:1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
 h1,
 h2,
 h3,
 h4 {
   color: #ffffff;
+  font-family: "Poppins-Medium";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -361,7 +523,7 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 h4 {
@@ -376,6 +538,7 @@ p,
 li {
   color: #f5f5f5;
   font-size: 1.6rem;
+  font-family: "Lora-Regular";
   text-align: justify;
   line-height: 3rem;
 }
@@ -384,5 +547,21 @@ a {
   color: #56a3d4;
   text-decoration: none;
   font-size: 1.6rem;
+  font-family: "Lora-Regular";
   display: inline-block;
+}
+
+@media screen and (min-width:1024px) {
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.bold {
+  font-family: "Lora-Bold";
 }/*# sourceMappingURL=style.css.map */
