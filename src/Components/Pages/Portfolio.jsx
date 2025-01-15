@@ -130,35 +130,35 @@ function Portfolio() {
           <div>
             <div>
               <p>HTML</p>
-              <img src="/image/html-5.png" alt="logo HTML" />
+              <img src="/my-portfolio//image/html-5.png" alt="logo HTML" />
             </div>
             <div>
               <p>CSS</p>
-              <img src="/image/css-3.png" alt="logo CSS" />
+              <img src="/my-portfolio//image/css-3.png" alt="logo CSS" />
             </div>
             <div>
               <p>SASS</p>
-              <img src="/image/sass-logo.png" alt="logo SASS" />
+              <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
             </div>
             <div>
               <p>JavaScript</p>
-              <img src="/image/js.png" alt="logo JavaScript" />
+              <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
             </div>
             <div>
               <p>React.JS</p>
-              <img src="/image/react.png" alt="logo React.JS" />
+              <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
             </div>
             <div>
               <p>Node.JS</p>
-              <img src="/image/node-js.jpeg" alt="logo Node.JS" />
+              <img src="/my-portfolio//image/node-js.jpeg" alt="logo Node.JS" />
             </div>
             <div>
               {/* <p>Express</p> */}
-              <img src="/image/express.png" alt="logo Express" />
+              <img src="/my-portfolio//image/express.png" alt="logo Express" />
             </div>
             <div>
               {/* <p>MySQL</p> */}
-              <img src="/image/my-sql.png" alt="logo MySQL" />
+              <img src="/my-portfolio//image/my-sql.png" alt="logo MySQL" />
             </div>
           </div>
         </div>
@@ -167,22 +167,22 @@ function Portfolio() {
           <div>
             <div>
               <p>GitHub</p>
-              <img src="/image/github.png" alt="logo GitHub" />
+              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
             </div>
             <div>
               <p>Visual Studio Code</p>
               <img
-                src="/image/visual-studio-code.png"
+                src="/my-portfolio//image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
             </div>
             <div>
               <p>Postman</p>
-              <img src="/image/postman.png" alt="logo Postman" />
+              <img src="/my-portfolio//image/postman.png" alt="logo Postman" />
             </div>
             <div>
               <p>Figma</p>
-              <img src="/image/figma.png" alt="logo Figma" />
+              <img src="/my-portfolio//image/figma.png" alt="logo Figma" />
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@ function Portfolio() {
         <div>
           <article>
             <img
-              src="/image/myst-travel-home.png"
+              src="/my-portfolio//image/myst-travel-home.png"
               alt="Image de la page d'accueil du site Myst'Travel"
             />
             <h3>Myst'Travel</h3>
