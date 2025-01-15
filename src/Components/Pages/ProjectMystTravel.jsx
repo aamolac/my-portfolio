@@ -32,7 +32,7 @@ function ProjectMystTravel() {
       </section>
       <section className="screen-page container">
         <img
-          src="./src/assets/image/myst-travel-home.png"
+          src="./public/image/myst-travel-home.png"
           alt="Image de la page d'accueil du site Myst'Travel"
         />
       </section>
@@ -42,11 +42,11 @@ function ProjectMystTravel() {
           <div>
             <h3>Front-end</h3>
             <div>
-              <img src="./src/assets/image/html-5.png" alt="logo HTML" />
-              <img src="./src/assets/image/css-3.png" alt="logo CSS" />
-              <img src="./src/assets/image/sass-logo.png" alt="logo SASS" />
-              <img src="./src/assets/image/js.png" alt="logo JavaScript" />
-              <img src="./src/assets/image/react.png" alt="logo React.JS" />
+              <img src="./public/image/html-5.png" alt="logo HTML" />
+              <img src="./public/image/css-3.png" alt="logo CSS" />
+              <img src="./public/image/sass-logo.png" alt="logo SASS" />
+              <img src="./public/image/js.png" alt="logo JavaScript" />
+              <img src="./public/image/react.png" alt="logo React.JS" />
             </div>
           </div>
           <ul>
@@ -74,9 +74,9 @@ function ProjectMystTravel() {
           <div>
             <h3>Back-end</h3>
             <div>
-              <img src="./src/assets/image/node-js.jpeg" alt="logo Node.JS" />
-              <img src="./src/assets/image/express.png" alt="logo Express" />
-              <img src="./src/assets/image/my-sql.png" alt="logo MySQL" />
+              <img src="./public/image/node-js.jpeg" alt="logo Node.JS" />
+              <img src="./public/image/express.png" alt="logo Express" />
+              <img src="./public/image/my-sql.png" alt="logo MySQL" />
             </div>
           </div>
           <ul>
@@ -97,12 +97,12 @@ function ProjectMystTravel() {
             <h3>Outils</h3>
             <div>
               <img
-                src="./src/assets/image/visual-studio-code.png"
+                src="./public/image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
-              <img src="./src/assets/image/github.png" alt="logo GitHub" />
-              <img src="./src/assets/image/postman.png" alt="logo Postman" />
-              <img src="./src/assets/image/figma.png" alt="logo Figma" />
+              <img src="./public/image/github.png" alt="logo GitHub" />
+              <img src="./public/image/postman.png" alt="logo Postman" />
+              <img src="./public/image/figma.png" alt="logo Figma" />
             </div>
           </div>
           <ul>
