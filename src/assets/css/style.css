@@ -257,7 +257,7 @@ footer .social-media a {
 }
 
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/public/image/dev-web.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/image/dev-web.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -464,7 +464,7 @@ footer .social-media a {
 }
 
 .banner-myst-travel {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/public/image/myst-travel-project.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/image/myst-travel-project.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
