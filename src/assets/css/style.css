@@ -266,10 +266,6 @@ footer .social-media a {
   align-items: center;
   height: 40rem;
 }
-.banner h1 {
-  font-size: 3rem;
-  padding-bottom: 5rem;
-}
 .banner p {
   font-size: 2rem;
   padding-bottom: 2rem;
@@ -297,6 +293,7 @@ footer .social-media a {
 #presentation h3 {
   text-align: center;
   text-decoration: underline;
+  text-transform: uppercase;
 }
 #presentation .training,
 #presentation .techno-langage,
@@ -361,10 +358,6 @@ footer .social-media a {
 }
 
 #project div {
-  background-color: rgba(255, 255, 255, 0.1);
-  margin: 3rem;
-  padding: 2rem 1rem 2rem 1rem;
-  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -376,8 +369,8 @@ footer .social-media a {
   align-items: center;
   gap: 1.5rem;
   padding: 2rem;
-  margin: auto;
-  background-color: #0d1b2a;
+  margin: 1rem 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
 }
 #project div article img {
@@ -398,6 +391,21 @@ footer .social-media a {
   text-align: center;
   padding: 1.5rem 1rem;
   margin: auto;
+}
+@media screen and (min-width:768px) {
+  #project div article a {
+    width: 50%;
+  }
+}
+@media screen and (min-width:1024px) {
+  #project div article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 10px rgba(86, 163, 212, 0.1);
+  }
+  #project div article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(86, 163, 212, 0.6), 0 0 20px rgba(86, 163, 212, 0.4);
+  }
 }
 @media screen and (min-width:768px) {
   #project div {
@@ -455,6 +463,11 @@ footer .social-media a {
   display: block;
   margin: 0.5rem auto;
 }
+@media screen and (min-width:768px) {
+  #contact form button {
+    width: 30%;
+  }
+}
 @media screen and (min-width:1024px) {
   #contact form button:hover {
     background-color: #f5f5f5;
@@ -477,6 +490,14 @@ footer .social-media a {
   font-size: 3rem;
   padding-bottom: 3rem;
 }
+.banner-myst-travel div {
+  display: flex;
+  align-items: center;
+}
+.banner-myst-travel div a {
+  padding: 1rem;
+  font-size: 4rem;
+}
 
 .presentation-myst-travel p {
   margin: 3rem;
@@ -486,6 +507,18 @@ footer .social-media a {
   display: block;
   width: 80%;
   margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+}
+@media screen and (min-width:768px) {
+  .screen-page {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .screen-page img {
+    width: 49%;
+    margin: auto;
+    padding: 1rem;
+  }
 }
 
 .langage-techno .front-end,
@@ -495,14 +528,20 @@ footer .social-media a {
   margin: 3rem;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 2rem;
+  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .langage-techno .front-end,
   .langage-techno .back-end,
   .langage-techno .tool {
     padding: 3rem;
-    margin: 5rem;
+    margin: 2rem 5rem;
   }
+}
+.langage-techno .front-end div h3,
+.langage-techno .back-end div h3,
+.langage-techno .tool div h3 {
+  text-transform: uppercase;
 }
 @media screen and (min-width:768px) {
   .langage-techno .front-end div,
@@ -532,6 +571,20 @@ footer .social-media a {
   max-height: 4rem;
   height: auto;
 }
+@media screen and (min-width:768px) {
+  .langage-techno .front-end div div,
+  .langage-techno .back-end div div,
+  .langage-techno .tool div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .langage-techno .front-end div div h3,
+  .langage-techno .back-end div div h3,
+  .langage-techno .tool div div h3 {
+    padding-bottom: 0;
+  }
+}
 .langage-techno .front-end ul,
 .langage-techno .back-end ul,
 .langage-techno .tool ul {
@@ -556,12 +609,30 @@ footer .social-media a {
   }
   .langage-techno .front-end {
     grid-area: front-end;
+    margin-right: 2rem;
+  }
+  .langage-techno .front-end div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .langage-techno .front-end div div {
+    flex-direction: row;
   }
   .langage-techno .back-end {
     grid-area: back-end;
+    margin-left: 2rem;
+  }
+  .langage-techno .back-end div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .langage-techno .back-end div div {
+    flex-direction: row;
   }
   .langage-techno .tool {
     grid-area: tool;
+    max-width: 49%;
+    margin: 2rem auto 0rem auto;
   }
 }
 
@@ -571,18 +642,23 @@ footer .social-media a {
   margin: 3rem;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 2rem;
+  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .functionality .functionality-user,
   .functionality .functionality-admin {
     padding: 3rem;
-    margin: 5rem;
+    margin: 2rem 5rem;
   }
 }
 .functionality .functionality-user div,
 .functionality .functionality-admin div {
   display: flex;
   gap: 1rem;
+}
+.functionality .functionality-user div h3,
+.functionality .functionality-admin div h3 {
+  text-transform: uppercase;
 }
 .functionality .functionality-user div svg,
 .functionality .functionality-admin div svg {
@@ -636,16 +712,34 @@ footer .social-media a {
   margin: 3rem;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 2rem;
+  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .requirement div {
     padding: 3rem;
-    margin: 5rem;
+    margin: 2rem 5rem;
   }
 }
 .requirement ul span,
 .requirement ul svg {
   color: #56a3d4;
+}
+
+.video-portfolio div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width:768px) {
+  .video-portfolio div {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.video-portfolio div a {
+  padding: 1rem;
+  font-size: 4rem;
 }
 
 * {
@@ -677,8 +771,13 @@ h4 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+h1 {
+  font-size: 3.5rem;
+  padding-bottom: 5rem;
+}
+
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
   padding: 2rem;
   margin: 5rem 0 2rem 0;
@@ -686,12 +785,12 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-bottom: 2rem;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .message {

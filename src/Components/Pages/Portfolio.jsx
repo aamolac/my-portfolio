@@ -104,7 +104,7 @@ function Portfolio() {
       <section id="presentation" className="container">
         <h2>Présentation</h2>
         <div className="introduction">
-          <p>Je m'appelle Annaïg MOLAC, j'ai 27 ans et je viens de Bretagne.</p>
+          <p>Moi c'est Annaïg MOLAC, j'ai 27 ans et je viens de Bretagne.</p>
           <p>
             Après plusieurs années dans le domaine de la chimie et de la
             cosmétologie et trois ans d'expérience en réglementation cosmétique,
@@ -145,11 +145,11 @@ function Portfolio() {
               <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
             </div>
             <div>
-              <p>React.JS</p>
+              <p>React.js</p>
               <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
             </div>
             <div>
-              <p>Node.JS</p>
+              <p>Node.js</p>
               <img src="/my-portfolio//image/node-js.jpeg" alt="logo Node.JS" />
             </div>
             <div>

@@ -4,28 +4,41 @@ import {
   faUser,
   faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import { Link } from "react-router-dom";
 
 function ProjectMystTravel() {
   return (
     <main>
       <section className="banner-myst-travel">
         <h1>Projet - Myst'Travel</h1>
+        <div>
+          <p>Lien GitHub du projet</p>
+          <Link
+            to="https://github.com/aamolac/myst-travel"
+            target="_blank"
+            aria-label="Aller sur le GitHub du projet Myst'Travel"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
+        </div>
       </section>
       <section className="presentation-myst-travel container">
         <p>
           Dans le cadre de ma formation Développeur Web FullStack à la 3W
           Academy, j'ai créé un projet intitulé Myst'Travel, un site web d'une
           agence de voyage spécialisée dans les voyages mystères. L'agence
-          propose deux formules : des destinations mystères, conçu préalablement
-          par l’agence, et des destinations sur-mesure, personnalisés grâce à un
-          formulaire. L'objectif était de concevoir une plateforme immersive
-          permettant aux utilisateurs de découvrir des destinations surprenantes
-          en fonction de leurs préférences personnelles.
+          propose deux formules : des destinations mystères conçues
+          préalablement par l’agence et des voyages sur-mesure personnalisés
+          grâce à un formulaire. L'objectif était de concevoir une plateforme
+          immersive permettant aux utilisateurs de découvrir des destinations
+          surprenantes en fonction de leurs préférences personnelles.
         </p>
         <p>
-          Ce projet a été réalisé pour valider ma formation en développement
-          web, et m'a permis de mettre en pratique plusieurs technologies, tout
-          en respectant des exigences essentielles en matière d'accessibilité,
+          Ce projet a été réalisé pour valider ma formation en développement web
+          et m'a permis de mettre en pratique plusieurs technologies, tout en
+          respectant des exigences essentielles en matière d'accessibilité,
           d'adaptabilité, d'éco-conception, de sécurité, de RGPD et de
           référencement SEO.
         </p>
@@ -34,6 +47,14 @@ function ProjectMystTravel() {
         <img
           src="/my-portfolio//image/myst-travel-home.png"
           alt="Image de la page d'accueil du site Myst'Travel"
+        />
+        <img
+          src="/my-portfolio//image/destination-mystere-page.png"
+          alt="Image de la page des destinations mystères de Myst'Travel"
+        />
+        <img
+          src="/my-portfolio//image/dashboard.png"
+          alt="Image de la page du tableu de bord, côté administrateur, de Myst'Travel"
         />
       </section>
       <section className="langage-techno container">
@@ -64,7 +85,7 @@ function ProjectMystTravel() {
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
-              <span className="bold">React :</span> pour une interface
+              <span className="bold">React.js :</span> pour une interface
               dynamique, avec une gestion d'état via le Context (préféré à Redux
               pour sa simplicité).
             </li>
@@ -100,8 +121,8 @@ function ProjectMystTravel() {
                 src="/my-portfolio//image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
-              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
               <img src="/my-portfolio//image/postman.png" alt="logo Postman" />
+              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
               <img src="/my-portfolio//image/figma.png" alt="logo Figma" />
             </div>
           </div>
@@ -165,7 +186,7 @@ function ProjectMystTravel() {
               <span className="bold">Formulaire des voyages sur-mesure :</span>{" "}
               Les utilisateurs peuvent faire une demande de voyage sur-mesure
               via un formulaire, en précisant des critères comme le type
-              d’expérience, le budget, ou le climat.
+              d’expérience, le budget ou le climat.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
@@ -239,7 +260,7 @@ function ProjectMystTravel() {
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">Adaptabilité :</span> Le site est
               responsive et compatible avec tous les appareils et navigateurs
-              grâce à l’utilisation de Flexbox, Grid, et d’images adaptatives.
+              grâce à l’utilisation de Flexbox, Grid et d’images adaptatives.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
@@ -257,8 +278,34 @@ function ProjectMystTravel() {
           </ul>
         </div>
       </section>
+      <section className="video-portfolio container">
+        <h2>Vidéo de présentation du projet</h2>
+        <div>
+          <iframe
+            src="https://player.vimeo.com/video/1047452145?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            title="Site Myst'Travel - côté utilisateur"
+          ></iframe>
+          <iframe
+            src="https://player.vimeo.com/video/1047452104?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            title="Site Myst'Travel - côté administrateur"
+          ></iframe>
+        </div>
+        <div>
+          <p>Lien GitHub du projet</p>
+          <Link
+            to="https://github.com/aamolac/myst-travel"
+            target="_blank"
+            aria-label="Aller sur le GitHub du projet Myst'Travel"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
-
 export default ProjectMystTravel;

@@ -12,6 +12,14 @@
     font-size: 3rem;
     padding-bottom: 3rem;
   }
+  div {
+    display: flex;
+    align-items: center;
+    a {
+      padding: 1rem;
+      font-size: 4rem;
+    }
+  }
 }
 
 .presentation-myst-travel {
@@ -25,6 +33,16 @@
     display: block;
     width: 80%;
     margin: 2rem auto 0 auto;
+    border-radius: 1rem;
+  }
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 49%;
+      margin: auto;
+      padding: 1rem;
+    }
   }
 }
 
@@ -33,11 +51,15 @@
   .back-end,
   .tool {
     @include cards;
+    padding: 2rem 1.5rem;
     @media #{$tablet} {
       padding: 3rem;
-      margin: 5rem;
+      margin: 2rem 5rem;
     }
     div {
+      h3 {
+        text-transform: uppercase;
+      }
       @media #{$tablet} {
         display: flex;
         justify-content: space-between;
@@ -55,6 +77,14 @@
           max-height: 4rem;
           height: auto;
         }
+        @media #{$tablet} {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            padding-bottom: 0;
+          }
+        }
       }
     }
     ul {
@@ -71,12 +101,30 @@
     }
     .front-end {
       grid-area: front-end;
+      margin-right: 2rem;
+      div {
+        flex-direction: column;
+        gap: 2rem;
+        div {
+          flex-direction: row;
+        }
+      }
     }
     .back-end {
       grid-area: back-end;
+      margin-left: 2rem;
+      div {
+        flex-direction: column;
+        gap: 2rem;
+        div {
+          flex-direction: row;
+        }
+      }
     }
     .tool {
       grid-area: tool;
+      max-width: 49%;
+      margin: 2rem auto 0rem auto;
     }
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -91,13 +139,17 @@
   .functionality-user,
   .functionality-admin {
     @include cards;
+    padding: 2rem 1.5rem;
     @media #{$tablet} {
       padding: 3rem;
-      margin: 5rem;
+      margin: 2rem 5rem;
     }
     div {
       display: flex;
       gap: 1rem;
+      h3 {
+        text-transform: uppercase;
+      }
       svg {
         color: $light-blue;
         font-size: 4rem;
@@ -147,15 +199,33 @@
 .requirement {
   div {
     @include cards;
+    padding: 2rem 1.5rem;
     @media #{$tablet} {
       padding: 3rem;
-      margin: 5rem;
+      margin: 2rem 5rem;
     }
   }
   ul {
     span,
     svg {
       color: $light-blue;
+    }
+  }
+}
+
+.video-portfolio {
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$tablet} {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    a {
+      padding: 1rem;
+      font-size: 4rem;
     }
   }
 }

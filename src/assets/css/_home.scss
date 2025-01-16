@@ -8,10 +8,7 @@
   justify-content: center;
   align-items: center;
   height: 40rem;
-  h1 {
-    font-size: 3rem;
-    padding-bottom: 5rem;
-  }
+
   p {
     font-size: 2rem;
     padding-bottom: 2rem;
@@ -42,6 +39,7 @@
   h3 {
     text-align: center;
     text-decoration: underline;
+    text-transform: uppercase;
   }
   .training,
   .techno-langage,
@@ -106,7 +104,6 @@
 // PROJET
 #project {
   div {
-    @include cards;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -117,8 +114,8 @@
       align-items: center;
       gap: 1.5rem;
       padding: 2rem;
-      margin: auto;
-      background-color: $blue-night;
+      margin: 1rem 3rem;
+      background-color: rgba(255, 255, 255, 0.1);
       border-radius: 2rem;
       img {
         max-width: 100%;
@@ -138,13 +135,23 @@
         text-align: center;
         padding: 1.5rem 1rem;
         margin: auto;
+        @media #{$tablet} {
+          width: 50%;
+        }
       }
     }
-    // @media #{$laptop} {
-    //   article:hover {
-    //     box-shadow: 0 40px 40px rgba(0, 0, 0, 0.5);
-    //   }
-    // }
+    @media #{$laptop} {
+      article {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 5px 10px rgba(86, 163, 212, 0.1);
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 10px rgba(86, 163, 212, 0.6),
+            0 0 20px rgba(86, 163, 212, 0.4);
+        }
+      }
+    }
   }
   @media #{$tablet} {
     div {
@@ -203,6 +210,9 @@
       width: 85%;
       display: block;
       margin: 0.5rem auto;
+      @media #{$tablet} {
+        width: 30%;
+      }
     }
     button:hover {
       @media #{$laptop} {
