@@ -54,6 +54,7 @@ function Header() {
     } else {
       // Sinon, redirige vers la page d'accueil avec l'ancre
       navigate(`/#${id}`);
+      toggleMenu();
     }
   };
 
