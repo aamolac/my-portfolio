@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { MenuContext } from "../../store/ContextMenu.jsx";
 
@@ -11,6 +11,7 @@ function Header() {
   const { isOpen, toggleMenu } = useContext(MenuContext);
   //Etat pour la tablette
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
+  const navigate = useNavigate();
 
   // Met à jour la taille de l'écran lorsque la fenêtre est redimensionnée
   useEffect(() => {
@@ -43,11 +44,16 @@ function Header() {
   };
 
   const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    console.log("Scrolling to:", id, "Element found:", !!element);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      toggleMenu(); // Fermer le menu après le clic sur un lien
+    if (window.location.pathname === "/") {
+      // Si on est déjà sur la page d'accueil
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        toggleMenu();
+      }
+    } else {
+      // Sinon, redirige vers la page d'accueil avec l'ancre
+      navigate(`/#${id}`);
     }
   };
 

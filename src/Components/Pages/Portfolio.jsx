@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import emailjs from "emailjs-com";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,14 +7,24 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Portfolio() {
   const [msg, setMsg] = useState("");
+  const location = useLocation();
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
   // Initialiser EmailJS
   React.useEffect(() => {
-    emailjs.init("user_"); // Remplacez par votre User ID d'EmailJS
+    emailjs.init("zimz49HWfGG7U52Gf"); // Remplacez par votre User ID d'EmailJS
   }, []);
 
   // Validation du formulaire
@@ -52,36 +62,31 @@ function Portfolio() {
   };
 
   // Gérer la soumission du formulaire
-  const submitHandler = async (e) => {
-    // Empêche le rechargement de la page lors de la soumission du formulaire
+  const submitHandler = (e) => {
     e.preventDefault();
 
     if (!validateForm(e)) {
-      // Ne pas soumettre si le formulaire est invalide
-      return;
+      return; // Ne pas soumettre si le formulaire est invalide
     }
 
-    // Si le formulaire est valide, appeler l'envoi du message
-    sendEmail(e.target);
+    sendEmail(e.target); // Envoyer directement le formulaire
   };
 
-  // Gérer l'envoi du formulaire via EmailJS
+  // Gérer l'envoi via EmailJS
   const sendEmail = (form) => {
-    const formData = new FormData(form);
-
     emailjs
-      .sendForm("service_rnfdhfd", "template_lqm1i3n", formData)
-      .then(function (response) {
-        setMsg("Message envoyé avec succès !");
+      .sendForm("service_rnfdhfd", "template_lqm1i3n", form)
+      .then((response) => {
+        setMsg("Votre message a été envoyé avec succès à Annaïg MOLAC !");
       })
-      .catch(function (error) {
+      .catch((error) => {
         setMsg("Erreur lors de l'envoi du message : " + error.text);
       });
   };
 
   return (
     <main>
-      <section className="banner">
+      <section className="banner banner-home">
         <h1>Annaïg MOLAC</h1>
         <p>Développeuse Web FullStack</p>
         <div className="social-media">
@@ -109,10 +114,11 @@ function Portfolio() {
             Après plusieurs années dans le domaine de la chimie et de la
             cosmétologie et trois ans d'expérience en réglementation cosmétique,
             j'ai décidé de me réorienter vers l'informatique et plus
-            précisément, le métier de Développeur Web. Ce choix vient de mon
-            envie de travailler dans un domaine plus stimulant où je pourrais
-            mettre à profit mes compétences logiques et méthodiques, peu
-            exploitées dans mon précédent emploi.
+            précisément, le métier de{" "}
+            <span className="dev-web">Développeur Web</span>. Ce choix vient de
+            mon envie de travailler dans un domaine plus stimulant où je
+            pourrais mettre à profit mes compétences logiques et méthodiques,
+            peu exploitées dans mon précédent emploi.
           </p>
           <p>
             Aprés avoir suivi des formations en ligne et appris les bases du
@@ -183,6 +189,10 @@ function Portfolio() {
             <div>
               <p>Figma</p>
               <img src="/my-portfolio//image/figma.png" alt="logo Figma" />
+            </div>
+            <div>
+              <p>EmailJS</p>
+              <img src="/my-portfolio//image/emailjs.png" alt="logo Figma" />
             </div>
           </div>
         </div>

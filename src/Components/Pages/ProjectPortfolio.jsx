@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function ProjectPortfolio() {
   return (
     <main>
-      <section className="banner-portfolio">
+      <section className="banner banner-portfolio">
         <h1>Projet - Mon Portfolio</h1>
         <div>
           <p>Lien GitHub du projet</p>
@@ -43,6 +43,7 @@ function ProjectPortfolio() {
             <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
             <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
             <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
+            <img src="/my-portfolio//image/emailjs.png" alt="logo Figma" />
           </div>
         </div>
         <ul>
@@ -62,6 +63,12 @@ function ProjectPortfolio() {
             <span className="bold">React.js :</span> pour une interface
             dynamique, avec une gestion d'état via le Context (préféré à Redux
             pour sa simplicité).
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faArrowRight} />{" "}
+            <span className="bold">EmailJS :</span> pour gérer l'envoi des
+            formulaires de contact directement depuis le front-end de manière
+            simple et efficace.
           </li>
         </ul>
 

@@ -94,3 +94,13 @@ body.no-scroll {
 .bold {
   font-family: "Lora-Bold";
 }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+}

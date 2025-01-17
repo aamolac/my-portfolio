@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function ProjectMystTravel() {
   return (
     <main>
-      <section className="banner-myst-travel">
+      <section className="banner banner-myst-travel">
         <h1>Projet - Myst'Travel</h1>
         <div>
           <p>Lien GitHub du projet</p>
@@ -283,13 +283,13 @@ function ProjectMystTravel() {
         <div>
           <iframe
             src="https://player.vimeo.com/video/1047452145?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             title="Site Myst'Travel - côté utilisateur"
           ></iframe>
           <iframe
             src="https://player.vimeo.com/video/1047452104?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             title="Site Myst'Travel - côté administrateur"
           ></iframe>

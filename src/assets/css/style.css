@@ -197,6 +197,7 @@ header .header-mobile #burger-menu.open nav a {
   padding: 2rem;
   transition: color 0.3s;
   border-radius: 1rem;
+  text-transform: uppercase;
 }
 header .header-mobile #burger-menu nav {
   display: none;
@@ -209,6 +210,7 @@ header .tablet-header nav {
 header .tablet-header nav a {
   text-align: center;
   font-size: 1.8rem;
+  font-family: "Poppins-Medium";
   color: #f5f5f5;
   display: flex;
   justify-content: center;
@@ -256,27 +258,20 @@ footer .social-media a {
   font-size: 5rem;
 }
 
-.banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/image/dev-web.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 40rem;
+.banner-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/image/dev-web.png");
 }
-.banner p {
+.banner-home p {
   font-size: 2rem;
   padding-bottom: 2rem;
 }
-.banner .social-media {
+.banner-home .social-media {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
 }
-.banner .social-media a {
+.banner-home .social-media a {
   padding: 1rem;
   font-size: 5rem;
 }
@@ -289,6 +284,10 @@ footer .social-media a {
 }
 #presentation .introduction p {
   margin: 1.5rem 3rem 1.5rem 3rem;
+}
+#presentation .introduction .dev-web {
+  font-family: "Lora-Bold";
+  color: #56a3d4;
 }
 #presentation h3 {
   text-align: center;
@@ -335,6 +334,13 @@ footer .social-media a {
   max-width: 100%;
   max-height: 4rem;
   height: auto;
+}
+@media screen and (min-width:768px) {
+  #presentation .techno-langage div div,
+  #presentation .techno-tool div div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 #presentation .techno-langage {
   grid-area: techno-langage;
@@ -477,14 +483,7 @@ footer .social-media a {
 }
 
 .banner-myst-travel {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/image/myst-travel-project.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 40rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/myst-travel-project.jpg");
 }
 .banner-myst-travel h1 {
   font-size: 3rem;
@@ -742,6 +741,22 @@ footer .social-media a {
   font-size: 4rem;
 }
 
+.banner-portfolio {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/myst-travel-project.jpg");
+}
+.banner-portfolio h1 {
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+.banner-portfolio div {
+  display: flex;
+  align-items: center;
+}
+.banner-portfolio div a {
+  padding: 1rem;
+  font-size: 4rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -827,4 +842,14 @@ body.no-scroll {
 
 .bold {
   font-family: "Lora-Bold";
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
 }/*# sourceMappingURL=style.css.map */
