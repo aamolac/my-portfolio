@@ -160,11 +160,19 @@ function Portfolio() {
             </div>
             <div>
               {/* <p>Express</p> */}
-              <img src="/my-portfolio//image/express.png" alt="logo Express" />
+              <img
+                src="/my-portfolio//image/express.png"
+                alt="logo Express"
+                className="logo-express"
+              />
             </div>
             <div>
               {/* <p>MySQL</p> */}
-              <img src="/my-portfolio//image/my-sql.png" alt="logo MySQL" />
+              <img
+                src="/my-portfolio//image/my-sql.png"
+                alt="logo MySQL"
+                className="logo-my-sql"
+              />
             </div>
           </div>
         </div>
@@ -216,6 +224,10 @@ function Portfolio() {
             </Link>
           </article>
           <article>
+            <img
+              src="/my-portfolio//image/screen-portfolio.png"
+              alt="Image de la page d'accueil du Portfolio"
+            />
             <h3>Mon Portfolio</h3>
             <Link
               to="/project-portfolio"

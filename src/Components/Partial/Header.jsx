@@ -61,7 +61,7 @@ function Header() {
   return (
     <header>
       <section
-        className={`${isTablet ? "tablet-header" : "header-mobile"}`}
+        className={`${isTablet ? "tablet-header container" : "header-mobile"}`}
         aria-label={isTablet ? "En-tête pour tablette" : "En-tête pour mobile"}
       >
         <Link

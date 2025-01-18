@@ -1,6 +1,6 @@
 .banner-portfolio {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/image/myst-travel-project.jpg");
+    url("/image/page-portfolio.jpg");
   h1 {
     font-size: 3rem;
     padding-bottom: 3rem;
@@ -12,5 +12,41 @@
       padding: 1rem;
       font-size: 4rem;
     }
+  }
+}
+
+.presentation-portfolio {
+  p {
+    margin: 3rem;
+  }
+}
+
+@media #{$laptop} {
+  .portfolio-langage {
+    h2 {
+      grid-area: title;
+    }
+    .title-front-end {
+      grid-area: front-end;
+    }
+    .tool {
+      max-width: 100%;
+      margin: 2rem 5rem 2rem 2rem;
+      .title-tool {
+        grid-area: tool;
+      }
+      div {
+        flex-direction: column;
+        gap: 2rem;
+        div {
+          flex-direction: row;
+        }
+      }
+    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "front-end tool";
   }
 }

@@ -10,7 +10,7 @@ function TitleUpdater() {
         document.title = "Projet - Myst'Travel";
         break;
       case "/project-portfolio":
-        document.title = "Projet - Portfolio";
+        document.title = "Projet - Mon Portfolio";
         break;
       default:
         document.title = "Portfolio - Annaïg Molac";

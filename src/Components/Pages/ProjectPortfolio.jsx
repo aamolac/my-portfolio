@@ -33,54 +33,50 @@ function ProjectPortfolio() {
           optimale.
         </p>
       </section>
-      <section className="langage-techno container">
+      <section className="langage-techno container portfolio-langage">
         <h2> Langages et technologies utilisés</h2>
-        <div>
-          <h3>Front-end</h3>
+        <div className="front-end">
           <div>
-            <img src="/my-portfolio/image/html-5.png" alt="logo HTML" />
-            <img src="/my-portfolio//image/css-3.png" alt="logo CSS" />
-            <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
-            <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
-            <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
-            <img src="/my-portfolio//image/emailjs.png" alt="logo Figma" />
+            <h3 className="title-front-end">Front-end</h3>
+            <div>
+              <img src="/my-portfolio/image/html-5.png" alt="logo HTML" />
+              <img src="/my-portfolio//image/css-3.png" alt="logo CSS" />
+              <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
+              <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
+              <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
+            </div>
           </div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">HTML/CSS :</span> pour la structure et le
+              style des pages, avec SASS pour la réutilisation grâce aux
+              variables et mixins.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">JavaScript :</span> pour ajouter des
+              fonctionnalités interactives et dynamiser l'expérience
+              utilisateur.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">React.js :</span> pour une interface
+              dynamique, avec une gestion d'état via le Context (préféré à Redux
+              pour sa simplicité).
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <FontAwesomeIcon icon={faArrowRight} />{" "}
-            <span className="bold">HTML/CSS :</span> pour la structure et le
-            style des pages, avec SASS pour la réutilisation grâce aux variables
-            et mixins.
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faArrowRight} />{" "}
-            <span className="bold">JavaScript :</span> pour ajouter des
-            fonctionnalités interactives et dynamiser l'expérience utilisateur.
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faArrowRight} />{" "}
-            <span className="bold">React.js :</span> pour une interface
-            dynamique, avec une gestion d'état via le Context (préféré à Redux
-            pour sa simplicité).
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faArrowRight} />{" "}
-            <span className="bold">EmailJS :</span> pour gérer l'envoi des
-            formulaires de contact directement depuis le front-end de manière
-            simple et efficace.
-          </li>
-        </ul>
-
         <div className="tool">
           <div>
-            <h3>Outils</h3>
+            <h3 className="title-tool">Outils</h3>
             <div>
               <img
                 src="/my-portfolio//image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
               <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
+              <img src="/my-portfolio//image/emailjs.png" alt="logo Figma" />
             </div>
           </div>
           <ul>
@@ -94,6 +90,12 @@ function ProjectPortfolio() {
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">GitHub :</span> pour le contrôle de version
               et la gestion collaborative du projet.
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />{" "}
+              <span className="bold">EmailJS :</span> pour gérer l'envoi des
+              formulaires de contact directement depuis le front-end de manière
+              simple et efficace.
             </li>
           </ul>
         </div>

@@ -64,11 +64,17 @@
       div {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: 1rem;
         img {
           max-width: 100%;
           max-height: 4rem;
           height: auto;
+        }
+        .logo-express,
+        .logo-my-sql {
+          max-height: 6rem;
+          object-fit: contain;
         }
         @media #{$tablet} {
           display: flex;
@@ -206,7 +212,7 @@
   }
 }
 
-.video-portfolio {
+.video-myst-travel {
   div {
     display: flex;
     flex-direction: column;

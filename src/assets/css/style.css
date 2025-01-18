@@ -232,30 +232,65 @@ header .tablet-header nav a {
 }
 
 footer {
-  padding-top: 2rem;
+  padding-top: 1rem;
   margin-top: 5rem;
 }
-footer section {
+footer div {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+}
+footer div section {
   width: 60%;
   margin: auto;
-  padding: 1rem;
 }
-footer section .name,
-footer section p {
+footer div section p {
   text-align: center;
 }
-footer .social-media {
+footer div .title {
+  padding: 0;
+  text-align: center;
+}
+footer div .title .name {
+  padding: 0;
+}
+footer div .social-media {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
+  grid-area: social-media;
+  padding: 1rem;
 }
-footer .social-media a {
+footer div .social-media a {
   padding: 1rem;
   font-size: 5rem;
+}
+footer div .legal {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width:768px) {
+  footer div {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title social-media" "legal legal";
+    gap: 2rem;
+  }
+  footer div .title {
+    grid-area: title;
+    padding: 0;
+  }
+  footer div .title a {
+    padding: 0;
+  }
+  footer div .legal {
+    grid-area: legal;
+  }
+  footer div .social-media {
+    gap: 2rem;
+  }
 }
 
 .banner-home {
@@ -325,9 +360,9 @@ footer .social-media a {
   gap: 1rem;
   padding: 1rem;
   margin: 1rem auto;
+  max-width: 24rem;
   background-color: #0d1b2a;
   border-radius: 1rem;
-  max-width: 20rem;
 }
 #presentation .techno-langage div div img,
 #presentation .techno-tool div div img {
@@ -335,12 +370,13 @@ footer .social-media a {
   max-height: 4rem;
   height: auto;
 }
-@media screen and (min-width:768px) {
-  #presentation .techno-langage div div,
-  #presentation .techno-tool div div {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+#presentation .techno-langage div div .logo-express,
+#presentation .techno-langage div div .logo-my-sql,
+#presentation .techno-tool div div .logo-express,
+#presentation .techno-tool div div .logo-my-sql {
+  max-height: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #presentation .techno-langage {
   grid-area: techno-langage;
@@ -352,7 +388,7 @@ footer .social-media a {
   #presentation {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " presentation presentation" " introduction training" " introduction techno-tool" "techno-langage techno-langage";
+    grid-template-areas: " presentation presentation" " introduction techno-langage" " introduction techno-langage" "introduction techno-tool" "training techno-tool";
     gap: 2rem;
   }
   #presentation .training,
@@ -411,6 +447,13 @@ footer .social-media a {
   #project div article:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(86, 163, 212, 0.6), 0 0 20px rgba(86, 163, 212, 0.4);
+  }
+}
+@media screen and (min-width:1024px) and (min-width:1024px) {
+  #project div article a:hover {
+    background-color: #f5f5f5;
+    color: #56a3d4;
+    border: 0.3rem solid #56a3d4;
   }
 }
 @media screen and (min-width:768px) {
@@ -561,6 +604,7 @@ footer .social-media a {
 .langage-techno .tool div div {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
 }
 .langage-techno .front-end div div img,
@@ -569,6 +613,16 @@ footer .social-media a {
   max-width: 100%;
   max-height: 4rem;
   height: auto;
+}
+.langage-techno .front-end div div .logo-express,
+.langage-techno .front-end div div .logo-my-sql,
+.langage-techno .back-end div div .logo-express,
+.langage-techno .back-end div div .logo-my-sql,
+.langage-techno .tool div div .logo-express,
+.langage-techno .tool div div .logo-my-sql {
+  max-height: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (min-width:768px) {
   .langage-techno .front-end div div,
@@ -724,25 +778,25 @@ footer .social-media a {
   color: #56a3d4;
 }
 
-.video-portfolio div {
+.video-myst-travel div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width:768px) {
-  .video-portfolio div {
+  .video-myst-travel div {
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 }
-.video-portfolio div a {
+.video-myst-travel div a {
   padding: 1rem;
   font-size: 4rem;
 }
 
 .banner-portfolio {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/myst-travel-project.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/page-portfolio.jpg");
 }
 .banner-portfolio h1 {
   font-size: 3rem;
@@ -757,6 +811,37 @@ footer .social-media a {
   font-size: 4rem;
 }
 
+.presentation-portfolio p {
+  margin: 3rem;
+}
+
+@media screen and (min-width:1024px) {
+  .portfolio-langage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title title" "front-end tool";
+  }
+  .portfolio-langage h2 {
+    grid-area: title;
+  }
+  .portfolio-langage .title-front-end {
+    grid-area: front-end;
+  }
+  .portfolio-langage .tool {
+    max-width: 100%;
+    margin: 2rem 5rem 2rem 2rem;
+  }
+  .portfolio-langage .tool .title-tool {
+    grid-area: tool;
+  }
+  .portfolio-langage .tool div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .portfolio-langage .tool div div {
+    flex-direction: row;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

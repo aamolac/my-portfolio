@@ -96,8 +96,16 @@ function ProjectMystTravel() {
             <h3>Back-end</h3>
             <div>
               <img src="/my-portfolio//image/node-js.jpeg" alt="logo Node.JS" />
-              <img src="/my-portfolio//image/express.png" alt="logo Express" />
-              <img src="/my-portfolio//image/my-sql.png" alt="logo MySQL" />
+              <img
+                src="/my-portfolio//image/express.png"
+                alt="logo Express"
+                className="logo-express"
+              />
+              <img
+                src="/my-portfolio//image/my-sql.png"
+                alt="logo MySQL"
+                className="logo-my-sql"
+              />
             </div>
           </div>
           <ul>
@@ -278,7 +286,7 @@ function ProjectMystTravel() {
           </ul>
         </div>
       </section>
-      <section className="video-portfolio container">
+      <section className="video-myst-travel container">
         <h2>Vidéo de présentation du projet</h2>
         <div>
           <iframe
