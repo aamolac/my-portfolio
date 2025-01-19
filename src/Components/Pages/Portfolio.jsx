@@ -24,7 +24,7 @@ function Portfolio() {
 
   // Initialiser EmailJS
   React.useEffect(() => {
-    emailjs.init("zimz49HWfGG7U52Gf"); // Remplacez par votre User ID d'EmailJS
+    emailjs.init("zimz49HWfGG7U52Gf");
   }, []);
 
   // Validation du formulaire
@@ -58,7 +58,7 @@ function Portfolio() {
       return false;
     }
 
-    return true; //
+    return true;
   };
 
   // Gérer la soumission du formulaire
@@ -109,16 +109,22 @@ function Portfolio() {
       <section id="presentation" className="container">
         <h2>Présentation</h2>
         <div className="introduction">
-          <p>Moi c'est Annaïg MOLAC, j'ai 27 ans et je viens de Bretagne.</p>
+          <p>
+            Moi c'est <span className="bold">Annaïg MOLAC</span>, j'ai{" "}
+            <span className="bold">27 ans</span> et je viens de{" "}
+            <span className="bold">Bretagne</span>.
+          </p>
           <p>
             Après plusieurs années dans le domaine de la chimie et de la
-            cosmétologie et trois ans d'expérience en réglementation cosmétique,
-            j'ai décidé de me réorienter vers l'informatique et plus
-            précisément, le métier de{" "}
+            cosmétologie ainsi que trois ans d'expérience en réglementation
+            cosmétique, j'ai décidé de me réorienter vers l'informatique et plus
+            précisément, vers le métier de{" "}
             <span className="dev-web">Développeur Web</span>. Ce choix vient de
-            mon envie de travailler dans un domaine plus stimulant où je
-            pourrais mettre à profit mes compétences logiques et méthodiques,
-            peu exploitées dans mon précédent emploi.
+            mon envie de travailler dans un domaine{" "}
+            <span className="bold">plus stimulant</span> où je pourrais mettre à
+            profit mes compétences <span className="bold">logiques</span> et{" "}
+            <span className="bold">méthodiques</span>, peu exploitées dans mon
+            précédent emploi.
           </p>
           <p>
             Aprés avoir suivi des formations en ligne et appris les bases du

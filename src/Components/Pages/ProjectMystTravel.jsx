@@ -26,21 +26,29 @@ function ProjectMystTravel() {
       </section>
       <section className="presentation-myst-travel container">
         <p>
-          Dans le cadre de ma formation Développeur Web FullStack à la 3W
-          Academy, j'ai créé un projet intitulé Myst'Travel, un site web d'une
-          agence de voyage spécialisée dans les voyages mystères. L'agence
-          propose deux formules : des destinations mystères conçues
-          préalablement par l’agence et des voyages sur-mesure personnalisés
-          grâce à un formulaire. L'objectif était de concevoir une plateforme
-          immersive permettant aux utilisateurs de découvrir des destinations
-          surprenantes en fonction de leurs préférences personnelles.
+          Dans le cadre de ma formation{" "}
+          <span className="bold">Développeur Web FullStack</span> à la 3W
+          Academy, j'ai créé un projet intitulé{" "}
+          <span className="bold">Myst'Travel</span>, un site web d'une agence de
+          voyage spécialisée dans les{" "}
+          <span className="bold">voyages mystères</span>. L'agence propose deux
+          formules : des <span className="bold">destinations mystères</span>{" "}
+          conçues préalablement par l’agence et des{" "}
+          <span className="bold">voyages sur-mesure personnalisés</span> grâce à
+          un formulaire. L'objectif était de concevoir une plateforme immersive
+          permettant aux utilisateurs de découvrir des destinations mystères en
+          fonction de leurs préférences personnelles.
         </p>
         <p>
           Ce projet a été réalisé pour valider ma formation en développement web
           et m'a permis de mettre en pratique plusieurs technologies, tout en
-          respectant des exigences essentielles en matière d'accessibilité,
-          d'adaptabilité, d'éco-conception, de sécurité, de RGPD et de
-          référencement SEO.
+          respectant des exigences essentielles en matière d'
+          <span className="bold">accessibilité</span>, d'
+          <span className="bold">adaptabilité</span>, d'
+          <span className="bold">éco-conception</span>, de{" "}
+          <span className="bold">sécurité</span>, de{" "}
+          <span className="bold">RGPD</span> et de{" "}
+          <span className="bold">référencement SEO</span>.
         </p>
       </section>
       <section className="screen-page container">
@@ -51,6 +59,10 @@ function ProjectMystTravel() {
         <img
           src="/my-portfolio//image/destination-mystere-page.png"
           alt="Image de la page des destinations mystères de Myst'Travel"
+        />
+        <img
+          src="/my-portfolio//image/authentification-myst-travel.png"
+          alt="Image de la page de connexion de Myst'Travel"
         />
         <img
           src="/my-portfolio//image/dashboard.png"
@@ -86,8 +98,7 @@ function ProjectMystTravel() {
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">React.js :</span> pour une interface
-              dynamique, avec une gestion d'état via le Context (préféré à Redux
-              pour sa simplicité).
+              dynamique, avec une gestion d'état via le Context.
             </li>
           </ul>
         </div>
@@ -187,14 +198,14 @@ function ProjectMystTravel() {
               <span className="bold">Réservation d’un voyage :</span> Après
               avoir sélectionné une destination mystère, les utilisateurs
               peuvent demander une réservation en indiquant leurs dates et le
-              nombre de participants.
+              nombre de voyageurs.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">Formulaire des voyages sur-mesure :</span>{" "}
               Les utilisateurs peuvent faire une demande de voyage sur-mesure
               via un formulaire, en précisant des critères comme le type
-              d’expérience, le budget ou le climat.
+              d’expérience, le budget ou le climat recherché.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
@@ -261,8 +272,8 @@ function ProjectMystTravel() {
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">Accessibilité :</span> J’ai garanti une
               expérience inclusive en utilisant une sémantique HTML appropriée,
-              des attributs ARIA, et en assurant un contraste des couleurs
-              conforme aux normes WCAG.
+              des attributs ARIA et ROLE, et en assurant un contraste des
+              couleurs conforme aux normes WCAG.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
@@ -294,12 +305,14 @@ function ProjectMystTravel() {
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             title="Site Myst'Travel - côté utilisateur"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-presentation allow-forms"
           ></iframe>
           <iframe
             src="https://player.vimeo.com/video/1047452104?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             title="Site Myst'Travel - côté administrateur"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-presentation allow-forms"
           ></iframe>
         </div>
         <div>

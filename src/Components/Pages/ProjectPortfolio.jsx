@@ -22,15 +22,18 @@ function ProjectPortfolio() {
       </section>
       <section className="presentation-portfolio container">
         <p>
-          Ce projet a pour objectif de concevoir et intégrer mon portfolio
-          personnel. Il a été pensé pour présenter de manière claire et
-          organisée mon parcours, mes compétences et mes réalisations dans le
-          développement web. J’ai porté une attention particulière à créer une
-          interface simple, moderne et responsive, permettant une navigation
-          fluide et agréable sur tous les appareils. Ce portfolio reflète mon
-          savoir-faire technique ainsi que mon souci du détail, en combinant
-          esthétique et fonctionnalité pour offrir une expérience utilisateur
-          optimale.
+          Ce projet a pour objectif de concevoir et intégrer{" "}
+          <span className="bold">mon portfolio personnel</span>. Il a été pensé
+          pour présenter de manière claire et organisée{" "}
+          <span className="bold">mon parcours</span>,{" "}
+          <span className="bold">mes compétences</span> et{" "}
+          <span className="bold">mes réalisations</span> dans le développement
+          web. J’ai porté une attention particulière à créer une{" "}
+          <span className="bold">interface simple, moderne et responsive</span>,
+          permettant une navigation fluide et agréable sur tous les appareils.
+          Ce portfolio reflète mon savoir-faire technique ainsi que mon souci du
+          détail, en combinant esthétique et fonctionnalité pour offrir une
+          expérience utilisateur optimale.
         </p>
       </section>
       <section className="langage-techno container portfolio-langage">
@@ -62,8 +65,7 @@ function ProjectPortfolio() {
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
               <span className="bold">React.js :</span> pour une interface
-              dynamique, avec une gestion d'état via le Context (préféré à Redux
-              pour sa simplicité).
+              dynamique, avec une gestion d'état via le Context.
             </li>
           </ul>
         </div>
@@ -88,8 +90,9 @@ function ProjectPortfolio() {
 
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}
-              <span className="bold">GitHub :</span> pour le contrôle de version
-              et la gestion collaborative du projet.
+              <span className="bold">GitHub :</span> utilisé principalement pour
+              le contrôle de version et pour héberger le projet sur GitHub
+              Pages.
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} />{" "}

@@ -295,6 +295,8 @@ footer div .legal {
 
 .banner-home {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/image/dev-web.png");
+  background-size: cover;
+  background-position: center;
 }
 .banner-home p {
   font-size: 2rem;
@@ -527,6 +529,8 @@ footer div .legal {
 
 .banner-myst-travel {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/myst-travel-project.jpg");
+  background-position: top;
+  background-size: cover;
 }
 .banner-myst-travel h1 {
   font-size: 3rem;
@@ -797,6 +801,8 @@ footer div .legal {
 
 .banner-portfolio {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image/page-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .banner-portfolio h1 {
   font-size: 3rem;
@@ -930,8 +936,6 @@ body.no-scroll {
 }
 
 .banner {
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;

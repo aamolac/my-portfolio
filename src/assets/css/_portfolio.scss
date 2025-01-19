@@ -1,6 +1,8 @@
 .banner-portfolio {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/image/page-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
   h1 {
     font-size: 3rem;
     padding-bottom: 3rem;
