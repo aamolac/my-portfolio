@@ -141,7 +141,7 @@ function ProjectMystTravel() {
                 alt="logo Visual Studio Code"
               />
               <img src="/my-portfolio//image/postman.png" alt="logo Postman" />
-              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
+              <img src="/my-portfolio//image/github.webp" alt="logo GitHub" />
               <img src="/my-portfolio//image/figma.png" alt="logo Figma" />
             </div>
           </div>

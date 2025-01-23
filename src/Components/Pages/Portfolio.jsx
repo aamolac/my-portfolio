@@ -187,7 +187,7 @@ function Portfolio() {
           <div>
             <div>
               <p>GitHub</p>
-              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
+              <img src="/my-portfolio//image/github.webp" alt="logo GitHub" />
             </div>
             <div>
               <p>Visual Studio Code</p>

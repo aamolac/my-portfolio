@@ -77,7 +77,7 @@ function ProjectPortfolio() {
                 src="/my-portfolio//image/visual-studio-code.png"
                 alt="logo Visual Studio Code"
               />
-              <img src="/my-portfolio//image/github.png" alt="logo GitHub" />
+              <img src="/my-portfolio//image/github.webp" alt="logo GitHub" />
               <img src="/my-portfolio//image/emailjs.png" alt="logo Figma" />
             </div>
           </div>
