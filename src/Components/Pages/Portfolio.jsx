@@ -157,15 +157,15 @@ function Portfolio() {
               <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
             </div>
             <div>
-              <p>React.js</p>
+              <p>React.JS</p>
               <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
             </div>
             <div>
-              <p>Node.js</p>
+              <p>Node.JS</p>
               <img src="/my-portfolio//image/node-js.jpeg" alt="logo Node.JS" />
             </div>
             <div>
-              {/* <p>Express</p> */}
+              <p>Express</p>
               <img
                 src="/my-portfolio//image/express.png"
                 alt="logo Express"
@@ -173,7 +173,7 @@ function Portfolio() {
               />
             </div>
             <div>
-              {/* <p>MySQL</p> */}
+              <p>MySQL</p>
               <img
                 src="/my-portfolio//image/my-sql.png"
                 alt="logo MySQL"
@@ -221,6 +221,24 @@ function Portfolio() {
               alt="Image de la page d'accueil du site Myst'Travel"
             />
             <h3>Myst'Travel</h3>
+            <div>
+              <img src="/my-portfolio//image/html-5.png" alt="logo HTML" />
+              <img src="/my-portfolio//image/css-3.png" alt="logo CSS" />
+              <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
+              <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
+              <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
+              <img src="/my-portfolio//image/node-js.jpeg" alt="logo Node.JS" />
+              <img
+                src="/my-portfolio//image/express.png"
+                alt="logo Express"
+                className="logo-express"
+              />
+              <img
+                src="/my-portfolio//image/my-sql.png"
+                alt="logo MySQL"
+                className="logo-my-sql"
+              />
+            </div>
             <Link
               to="/project-myst-travel"
               onClick={scrollToTop}
@@ -235,6 +253,13 @@ function Portfolio() {
               alt="Image de la page d'accueil du Portfolio"
             />
             <h3>Mon Portfolio</h3>
+            <div>
+              <img src="/my-portfolio//image/html-5.png" alt="logo HTML" />
+              <img src="/my-portfolio//image/css-3.png" alt="logo CSS" />
+              <img src="/my-portfolio//image/sass-logo.png" alt="logo SASS" />
+              <img src="/my-portfolio//image/js.png" alt="logo JavaScript" />
+              <img src="/my-portfolio//image/react.png" alt="logo React.JS" />
+            </div>
             <Link
               to="/project-portfolio"
               onClick={scrollToTop}

@@ -336,7 +336,7 @@ footer div .legal {
 #presentation .techno-tool {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem;
   border-radius: 2rem;
 }
 #presentation .training p,
@@ -371,6 +371,7 @@ footer div .legal {
   max-width: 100%;
   max-height: 4rem;
   height: auto;
+  border-radius: 1rem;
 }
 #presentation .techno-langage div div .logo-express,
 #presentation .techno-langage div div .logo-my-sql,
@@ -399,6 +400,16 @@ footer div .legal {
     margin-top: 0;
     margin-bottom: 1rem;
   }
+  #presentation .training div,
+  #presentation .techno-langage div,
+  #presentation .techno-tool div {
+    gap: 0;
+  }
+  #presentation .training div div,
+  #presentation .techno-langage div div,
+  #presentation .techno-tool div div {
+    gap: 1;
+  }
 }
 
 #project div {
@@ -411,7 +422,7 @@ footer div .legal {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
   padding: 2rem;
   margin: 1rem 3rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -422,6 +433,26 @@ footer div .legal {
   max-height: 100rem;
   height: auto;
   border-radius: 1rem;
+}
+#project div article h3 {
+  padding-bottom: 0;
+}
+#project div article div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width:768px) {
+  #project div article div {
+    height: 10rem;
+  }
+}
+#project div article div img {
+  max-width: 100%;
+  max-height: 4rem;
+  height: auto;
 }
 #project div article a {
   background-color: #56a3d4;
@@ -461,6 +492,7 @@ footer div .legal {
 @media screen and (min-width:768px) {
   #project div {
     flex-direction: row;
+    gap: 0;
   }
   #project div article {
     width: 50%;
@@ -553,7 +585,7 @@ footer div .legal {
   display: block;
   width: 80%;
   margin: 2rem auto 0 auto;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 @media screen and (min-width:768px) {
   .screen-page {
@@ -572,15 +604,13 @@ footer div .legal {
 .langage-techno .tool {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem;
   border-radius: 2rem;
-  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .langage-techno .front-end,
   .langage-techno .back-end,
   .langage-techno .tool {
-    padding: 3rem;
     margin: 2rem 5rem;
   }
 }
@@ -617,6 +647,7 @@ footer div .legal {
   max-width: 100%;
   max-height: 4rem;
   height: auto;
+  border-radius: 1rem;
 }
 .langage-techno .front-end div div .logo-express,
 .langage-techno .front-end div div .logo-my-sql,
@@ -666,22 +697,14 @@ footer div .legal {
   }
   .langage-techno .front-end {
     grid-area: front-end;
-    margin-right: 2rem;
-  }
-  .langage-techno .front-end div {
-    flex-direction: column;
-    gap: 2rem;
+    margin: 2rem;
   }
   .langage-techno .front-end div div {
     flex-direction: row;
   }
   .langage-techno .back-end {
     grid-area: back-end;
-    margin-left: 2rem;
-  }
-  .langage-techno .back-end div {
-    flex-direction: column;
-    gap: 2rem;
+    margin: 2rem;
   }
   .langage-techno .back-end div div {
     flex-direction: row;
@@ -697,25 +720,38 @@ footer div .legal {
 .functionality .functionality-admin {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem;
   border-radius: 2rem;
-  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .functionality .functionality-user,
   .functionality .functionality-admin {
-    padding: 3rem;
     margin: 2rem 5rem;
+  }
+}
+@media screen and (min-width:1024px) {
+  .functionality .functionality-user,
+  .functionality .functionality-admin {
+    margin: 2rem;
   }
 }
 .functionality .functionality-user div,
 .functionality .functionality-admin div {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 2rem 0;
+}
+@media screen and (min-width:768px) {
+  .functionality .functionality-user div,
+  .functionality .functionality-admin div {
+    padding: 0;
+  }
 }
 .functionality .functionality-user div h3,
 .functionality .functionality-admin div h3 {
   text-transform: uppercase;
+  padding: 0;
 }
 .functionality .functionality-user div svg,
 .functionality .functionality-admin div svg {
@@ -767,13 +803,11 @@ footer div .legal {
 .requirement div {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 3rem;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem;
   border-radius: 2rem;
-  padding: 2rem 1.5rem;
 }
 @media screen and (min-width:768px) {
   .requirement div {
-    padding: 3rem;
     margin: 2rem 5rem;
   }
 }
@@ -839,10 +873,6 @@ footer div .legal {
   }
   .portfolio-langage .tool .title-tool {
     grid-area: tool;
-  }
-  .portfolio-langage .tool div {
-    flex-direction: column;
-    gap: 2rem;
   }
   .portfolio-langage .tool div div {
     flex-direction: row;

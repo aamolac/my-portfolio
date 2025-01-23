@@ -71,6 +71,7 @@
           max-width: 100%;
           max-height: 4rem;
           height: auto;
+          border-radius: 1rem;
         }
         .logo-express,
         .logo-my-sql {
@@ -101,6 +102,12 @@
     .techno-tool {
       margin-top: 0;
       margin-bottom: 1rem;
+      div {
+        gap: 0;
+        div {
+          gap: 1;
+        }
+      }
     }
   }
 }
@@ -116,7 +123,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
+      gap: 3rem;
       padding: 2rem;
       margin: 1rem 3rem;
       background-color: rgba(255, 255, 255, 0.1);
@@ -126,6 +133,24 @@
         max-height: 100rem;
         height: auto;
         border-radius: 1rem;
+      }
+      h3 {
+        padding-bottom: 0;
+      }
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @media #{$tablet} {
+          height: 10rem;
+        }
+        img {
+          max-width: 100%;
+          max-height: 4rem;
+          height: auto;
+        }
       }
       a {
         background-color: $light-blue;
@@ -148,7 +173,6 @@
       article {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 5px 10px rgba(86, 163, 212, 0.1);
-
         &:hover {
           transform: scale(1.05);
           box-shadow: 0 0 10px rgba(86, 163, 212, 0.6),
@@ -167,6 +191,7 @@
   @media #{$tablet} {
     div {
       flex-direction: row;
+      gap: 0;
       article {
         width: 50%;
       }
