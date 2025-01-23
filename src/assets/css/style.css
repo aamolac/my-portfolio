@@ -338,6 +338,7 @@ footer div .legal {
   margin: 3rem;
   padding: 2rem;
   border-radius: 2rem;
+  padding: 1rem;
 }
 #presentation .training p,
 #presentation .techno-langage p,
@@ -436,6 +437,7 @@ footer div .legal {
 }
 #project div article h3 {
   padding-bottom: 0;
+  font-size: 3rem;
 }
 #project div article div {
   display: flex;
@@ -447,6 +449,11 @@ footer div .legal {
 @media screen and (min-width:768px) {
   #project div article div {
     height: 10rem;
+  }
+}
+@media screen and (min-width:1024px) {
+  #project div article div {
+    height: 5rem;
   }
 }
 #project div article div img {
