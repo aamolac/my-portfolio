@@ -345,6 +345,11 @@ footer div .legal {
 #presentation .techno-tool p {
   text-align: center;
 }
+#presentation .training h3,
+#presentation .techno-langage h3,
+#presentation .techno-tool h3 {
+  padding-top: 1rem;
+}
 #presentation .training {
   grid-area: training;
 }
